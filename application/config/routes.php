@@ -52,3 +52,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 $route['default_controller'] = 'welcome';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
+
+$route['srirameseva/notification'] = 'welcome/notification';
+$route['srirameseva/serviceforms'] = 'welcome/serviceforms';
+$route['srirameseva/customers'] = 'welcome/customers';
+$route['srirameseva/services'] = 'welcome/services';
+$route['srirameseva/billing'] = 'welcome/billing';

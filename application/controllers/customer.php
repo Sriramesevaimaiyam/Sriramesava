@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Welcome extends CI_Controller {
+class customer extends CI_Controller {
 
 	/**
 	 * Index Page for this controller.
@@ -23,7 +23,7 @@ class Welcome extends CI_Controller {
 		$this->load->view('dashboard.php');
 	}
 
-	public function services(){
+	public function createCustomer(){
 		$this->load->view('services.php');
 	}
 

@@ -91,7 +91,8 @@
     </head>
         <body>
         <!-- Sidenav -->
-                    <nav class="navbar navbar-vertical fixed-left navbar-expand-md navbar-light bg-white" id="sidenav-main">
+                       <!-- Sidenav -->
+                       <nav class="navbar navbar-vertical fixed-left navbar-expand-md navbar-light bg-white" id="sidenav-main">
                 <div class="container-fluid">
                     <!-- Toggler -->
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#sidenav-collapse-main" aria-controls="sidenav-main" aria-expanded="false" aria-label="Toggle navigation">
@@ -196,22 +197,22 @@
                                                                     </a>
                                                                 </li>-->
                                                                                                         <li class="nav-item">
-                                        <a class="nav-link" href="https://www.tndigitalseva.in/dashboard">
+                                        <a class="nav-link" href="http://localhost/srirameseva/">
                                             <i class="ni ni-shop text-primary"></i> Dashboard
                                         </a>
                                     </li>
-                                        <li class="nav-item">
+                                        <!-- <li class="nav-item">
                                             <a class="nav-link" href="https://www.tndigitalseva.in/my-bookmarks">
                                                 <i class="ni ni-book-bookmark text-primary"></i> My Bookmarks
                                             </a>
-                                        </li>
+                                        </li> -->
                                         <li class="nav-item">
-                                            <a class="nav-link" href="https://www.tndigitalseva.in/services">
+                                            <a class="nav-link" href="http://localhost/srirameseva/services">
                                                 <i class="ni ni-archive-2 text-primary"></i> Public Services
                                             </a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="https://www.tndigitalseva.in/services/detailed_notification">
+                                            <a class="nav-link" href="http://localhost/srirameseva/notification">
                                                 <i class="ni ni-notification-70 text-primary"></i> Current Notification
                                             </a>
                                         </li>
@@ -222,41 +223,40 @@
                                                                                 </li>-->
 
                                                                                 <li class="nav-item">
-                                            <a class="nav-link" href="https://www.tndigitalseva.in/services/forms">
+                                            <a class="nav-link" href="http://localhost/srirameseva/serviceforms">
                                                 <i class="ni ni-collection text-primary"></i> Service Forms
                                             </a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="https://www.tndigitalseva.in/customers">
+                                            <a class="nav-link" href="http://localhost/srirameseva/customers">
                                                 <i class="ni ni-bullet-list-67 text-primary"></i> Customer Report
                                             </a>
                                         </li>     
                                         <li class="nav-item">
-                                            <a class="nav-link" href="https://www.tndigitalseva.in/billing">
+                                            <a class="nav-link" href="http://localhost/srirameseva/billing">
                                                 <i class="fa fa-list-alt text-primary"></i> Billing Report</a>
                                         </li> 
-                                        <li class="nav-item">
+                                        <!-- <li class="nav-item">
                                             <a class="nav-link" href="https://www.tndigitalseva.in/services/agency">
-                                                <!--<i class="ni ni-tv-2 text-primary"></i> Services <span class="badge badge-success"></span> -->
                                                 <i class="ni ni-image text-primary"></i> Advertisement Ads
                                             </a>
-                                        </li>
-                                        <li class="nav-item">
+                                        </li> -->
+                                        <!-- <li class="nav-item">
                                             <a class="nav-link" href="https://www.tndigitalseva.in/tools">
                                                 <i class="ni ni-settings text-primary"></i> System Softwares
                                             </a>
-                                        </li> 
+                                        </li>  -->
                                                                                                                            <!--<li class="nav-item">
                                                                                         <a class="nav-link" href="https://www.tndigitalseva.in/services/tutorial">
                                                                                             <i class="ni ni-button-play text-primary"></i> Tutorial Video
                                                                                         </a>
                                                                                     </li>-->
-                                                                                        <li class="nav-item">
+                                                                                        <!-- <li class="nav-item">
                                                     <a class="nav-link " href="https://www.tndigitalseva.in/services/market"><i class="ni ni-tv-2 text-primary"></i> Market Place</a>
                                                 </li>
                                                 <li class="nav-item">
                                                     <a class="nav-link " href="https://www.tndigitalseva.in/services/how"><i class="ni ni-spaceship text-primary"></i> How to use</a>
-                                                </li>
+                                                </li> -->
 <!--                                        <li class="nav-item dropdown">
                                             <a class="nav-link nav-link-icon" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                                 <i class="ni ni-bullet-list-67 text-primary"></i> Business
@@ -303,25 +303,21 @@
 	
 		
 			<p style="margin-left:10px">
-			File: /home/tndigitalseva/public_html/application/libraries/BaseController.php<br />
-			Line: 107<br />
+			File: /home/tndigitalseva/public_html/application/views/dashboard.php<br />
+			Line: 1<br />
 			Function: view			</p>
 
 		
 	
 		
-			<p style="margin-left:10px">
-			File: /home/tndigitalseva/public_html/application/controllers/Billing.php<br />
-			Line: 109<br />
-			Function: loadViews			</p>
-
+	
 		
 	
 		
 			<p style="margin-left:10px">
-			File: /home/tndigitalseva/public_html/application/controllers/Billing.php<br />
-			Line: 32<br />
-			Function: detailed			</p>
+			File: /home/tndigitalseva/public_html/application/controllers/Login.php<br />
+			Line: 687<br />
+			Function: view			</p>
 
 		
 	
