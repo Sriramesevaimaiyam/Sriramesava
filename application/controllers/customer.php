@@ -17,14 +17,33 @@ class customer extends CI_Controller {
 	 * So any other public methods not prefixed with an underscore will
 	 * map to /index.php/welcome/<method_name>
 	 * @see https://codeigniter.com/userguide3/general/urls.html
+     * 
 	 */
+    function __construct()
+    {
+        parent::__construct();
+        $this->load->model('customerModel');
+        // if ($this->Utilities->checkUserLogged()) {
+        //     $userLoggedIn = $this->session->get_userdata('vendorLoggedIn');
+        //     $this->data['vendorLoggedIn'] = $userLoggedIn['vendorLoggedIn'];
+        // }
+    }
+
 	public function index()
 	{
-		$this->load->view('dashboard.php');
+		$customerData = $this->customerModel->getCustomerList();
+		$this->data['customerData'] = $customerData;
+		$this->load->view('customer.php');
 	}
 
 	public function createCustomer(){
-		$this->load->view('services.php');
+		$postData = $this->input->post(null, true);
+
+        $customerList = $this->customerModel->getCustomerList($postData['search']);
+	}
+
+	public function editCustomer(){
+		
 	}
 
 	public function notification(){
