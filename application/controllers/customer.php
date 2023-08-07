@@ -31,19 +31,21 @@ class customer extends CI_Controller {
 
 	public function index()
 	{
-		$customerData = $this->customerModel->getCustomerList();
-		$this->data['customerData'] = $customerData;
 		$this->load->view('customer.php');
+	}
+
+	public function searchresult(){
+		$postData = $this->input->post(null, true);
+
+        $customerList = $this->customerModel->getCustomerList($postData['search']);
+		$this->load->view('customer_search.php');
 	}
 
 	public function createCustomer(){
 		$postData = $this->input->post(null, true);
 
         $customerList = $this->customerModel->getCustomerList($postData['search']);
-	}
-
-	public function editCustomer(){
-		
+		$this->load->view('customer_search.php');
 	}
 
 	public function notification(){

@@ -1,1826 +1,629 @@
-<!DOCTYPE html>
-<html>
-
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Tn Digital Seva. This website belongs to Tn Digital Seva. Content owned and updated by  Tn Digital Seva.">
-    <meta name="author" content="VIGOUS">
-
-    <title>Customers - TN Digital Seva</title>
-    <!-- Favicon -->
-    <!-- <link rel="shortcut icon" href="https://www.tndigitalseva.in/assets/web/img/logo-sm.png"> -->
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
-    <!-- Icons -->
-    <!-- <link href="https://www.tndigitalseva.in/assets/panel/vendor/nucleo/css/nucleo.css" rel="stylesheet">
-        <link href="https://www.tndigitalseva.in/assets/panel/vendor/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet"> -->
-    <!-- Argon CSS -->
-    <link type="text/css" href="https://www.tndigitalseva.in/assets/panel/css/argon.css?v=1.0.0" rel="stylesheet">
-    <script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
-    <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.min.js"></script>
-
-    <!--  <link type="text/css" href="//cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css" rel="stylesheet">-->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/flowbite@1.4.4/dist/flowbite.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.4/flowbite.min.css" rel="stylesheet" />
     <style>
-        html,
-        body {
-            overflow-x: hidden;
-        }
 
-        input[type=number]::-webkit-inner-spin-button,
-        input[type=number]::-webkit-outer-spin-button {
-            -webkit-appearance: none;
-            -moz-appearance: none;
-            appearance: none;
-            margin: 0;
-        }
-
-        .modal-header-danger {
-            color: #fff;
-            padding: 9px 15px;
-            border-bottom: 1px solid #eee;
-            background-color: #d9534f;
-            -webkit-border-top-left-radius: 5px;
-            -webkit-border-top-right-radius: 5px;
-            -moz-border-radius-topleft: 5px;
-            -moz-border-radius-topright: 5px;
-            border-top-left-radius: 5px;
-            border-top-right-radius: 5px;
-        }
-
-        .errmsg {
-            color: red;
-        }
-
-        .uppercase_input {
-            text-transform: uppercase;
-        }
-
-        input.invalid,
-        textarea.invalid,
-        select.invalid {
-            background-color: #ffdddd;
-        }
-
-        .navbar .notification {
-            position: absolute;
-            top: 0px;
-            border: 1px solid #fff;
-            right: 10px;
-            font-size: 10px;
-            background: #f44336;
-            color: #fff;
-            min-width: 15px;
-            padding: 0 5px;
-            height: 15px;
-            border-radius: 12px;
-            text-align: center;
-            line-height: 12px;
-            vertical-align: middle;
-            display: block;
-        }
-
-        .billing-popup {
-            width: 0px;
-            position: fixed;
-            bottom: 0;
-            right: 0px;
-            z-index: 9;
-            box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.4);
-            transition: 0.3s;
-            border-radius: 15px;
-            padding: 10px;
-        }
     </style>
-    <!-- <script src="https://www.tndigitalseva.in/assets/panel/vendor/jquery/dist/jquery.min.js"></script>
-        <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.min.js"></script>
-        <script src="https://jquery.bassistance.de/validate/additional-methods.js"></script> -->
-    <!--  <script src="//cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
-                <style>
-              .dataTables_wrapper .dataTables_filter {
-                  float: right;
-                  text-align: right;
-                  visibility: hidden;
-              }
-          </style>-->
 </head>
-
-<body>
-    <!-- Sidenav -->
-    <nav class="navbar navbar-vertical fixed-left navbar-expand-md navbar-light bg-white" id="sidenav-main">
-        <div class="container-fluid">
-            <!-- Toggler -->
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#sidenav-collapse-main" aria-controls="sidenav-main" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+<header>
+    <nav class="bg-black border-gray-200 px-2 lg:px-6 py-5 dark:bg-gray-800">
+        <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
+            <a href="https://flowbite.com" class="flex items-center">
+                <img src="https://flowbite.com/docs/images/logo.svg" class="mr-3 h-6 sm:h-9" alt="Flowbite Logo" />
+                <span class="self-center text-white text-xl font-semibold whitespace-nowrap dark:text-white">Sri Ram E-Sevai Maiyam</span>
+            </a>
+            <div class="flex items-center lg:order-2">
+                <a href="#" class="text-gray-800 dark:text-white hover:bg-gray-50 focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 dark:hover:bg-gray-700 focus:outline-none dark:focus:ring-gray-800">Log in</a>
+                <a href="#" class="text-white bg-teal-700 hover:bg-teal-800 focus:ring-4 focus:ring-teal-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 dark:bg-teal-600 dark:hover:bg-teal-700 focus:outline-none dark:focus:ring-teal-800">Get started</a>
+                <button data-collapse-toggle="mobile-menu-2" type="button" class="inline-flex items-center p-2 ml-1 text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="mobile-menu-2" aria-expanded="false">
+                    <span class="sr-only">Open main menu</span>
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path>
+                    </svg>
+                    <svg class="hidden w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                    </svg>
+                </button>
+            </div>
+            <div class="hidden justify-between items-center w-full lg:flex lg:w-auto lg:order-1" id="mobile-menu-2">
+                <ul class="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0">
+                    <li>
+                        <a href="http://localhost/srirameseva/" class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-teal-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">Dashboard</a>
+                    </li>
+                    <li>
+                        <a href="http://localhost/srirameseva/services" class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-teal-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">Public Services</a>
+                    </li>
+                    <li>
+                        <a href="http://localhost/srirameseva/customers" class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-teal-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">Customer Report</a>
+                    </li>
+                    <li>
+                        <a href="http://localhost/srirameseva/billing" class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-teal-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">Billing Report</a>
+                    </li>
+                    <li>
+                        <a href="http://localhost/srirameseva/serviceforms" class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-teal-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">Service Forms</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+<!-- Add new Customer Form -->
+<!-- Modal toggle -->
+<!-- Main modal -->
+<div id="authentication-modal" tabindex="-1" aria-hidden="true" class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full">
+    <div class="relative w-full max-w-md max-h-full">
+        <!-- Modal content -->
+        <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+            <button type="button" class="absolute top-3 right-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ml-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white" data-modal-hide="authentication-modal">
+                <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
+                </svg>
             </button>
-            <!-- Brand -->
-            <!-- <a class="" href="https://www.tndigitalseva.in/" style="width:200px;height:56px;">
-                        <img src="https://www.tndigitalseva.in/assets/web/img/logo-lg.png" class="navbar-brand-img" alt="..." style="width:200px;height:56px;">
-                    </a> -->
-            <!-- User -->
-            <ul class="navbar-nav align-items-center d-none d-md-flex">
-                <li>
-                    <!--                            <h2>TNDS00</h2>-->
-                    <h2>Hi, Sri Ram E-Sevai Maiyam</h2>
-                </li>
-            </ul>
-            <ul class="navbar-nav align-items-center d-none d-md-flex">
-                <li>
-                    <!--<h6>Valid Upto: 31-12-2100</h6>-->
-                </li>
-            </ul>
-
-            <ul class="nav align-items-center d-md-none">
-                <!--                        <li class="nav-item dropdown">
-                                                    <a class="nav-link nav-link-icon" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                        <i class="ni ni-bell-55" onclick="update_notifications();"></i><span class="notification  notification-data-count" onclick="update_notifications();">0</span>
-                                                    </a>
-                                                    <div class="dropdown-menu dropdown-menu-arrow dropdown-menu-right notification-data" aria-labelledby="navbar-default_dropdown_1">
-                        
-                                                    </div>
-                                                </li>-->
-                <li class="nav-item dropdown">
-                    <a class="nav-link" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <div class="media align-items-center">
-                            <span class="avatar avatar-sm rounded-circle">
-                                <img alt="Image placeholder" src="https://www.tndigitalseva.in/uploads/profile/profile_image_1756947120-10-202216-35-08191364ljdx2XV_400x400.jpg">
-                            </span>
-                        </div>
-                    </a>
-                    <div class="dropdown-menu dropdown-menu-arrow dropdown-menu-right">
-                        <div class=" dropdown-header noti-title">
-                            <h6 class="text-overflow m-0">Welcome!</h6>
-                        </div>
-                        <a href="https://www.tndigitalseva.in/users/profile" class="dropdown-item">
-                            <i class="ni ni-single-02"></i>
-                            <span>My profile</span>
-                        </a>
-                        <!--                            <a href="./examples/profile.html" class="dropdown-item">
-                                                                <i class="ni ni-settings-gear-65"></i>
-                                                                <span>Settings</span>
-                                                            </a>
-                                                            <a href="./examples/profile.html" class="dropdown-item">
-                                                                <i class="ni ni-calendar-grid-58"></i>
-                                                                <span>Activity</span>
-                                                            </a>
-                                                            <a href="./examples/profile.html" class="dropdown-item">
-                                                                <i class="ni ni-support-16"></i>
-                                                                <span>Support</span>
-                                                            </a>-->
-                        <div class="dropdown-divider"></div>
-                        <a href="https://www.tndigitalseva.in/logout" class="dropdown-item">
-                            <i class="ni ni-user-run"></i>
-                            <span>Logout</span>
-                        </a>
+            <div class="px-6 py-6 lg:px-8">
+                <h3 class="mb-4 text-xl font-medium text-gray-900 dark:text-white">Create New Customer</h3>
+                <form class="space-y-6" action="#">
+                    <div>
+                        <label for="name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Name</label>
+                        <input type="text" name="name" id="name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="name" required>
                     </div>
-                </li>
-            </ul>
-            <!-- Collapse -->
-            <div class="collapse navbar-collapse" id="sidenav-collapse-main">
-                <!-- Collapse header -->
-                <div class="navbar-collapse-header d-md-none">
-                    <div class="row">
-                        <!-- <div class="col-6 collapse-brand">
-                                    <a href="https://www.tndigitalseva.in/">
-                                        <img src="https://www.tndigitalseva.in/assets/web/img/logo-lg.png">
-                                    </a>
-                                </div> -->
-                        <div class="col-6 collapse-close">
-                            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#sidenav-collapse-main" aria-controls="sidenav-main" aria-expanded="false" aria-label="Toggle sidenav">
-                                <span></span>
-                                <span></span>
-                            </button>
-                        </div>
+                    <div>
+                        <label for="mobile" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">mobile</label>
+                        <input type="number" name="mobile" id="password" placeholder="mobile" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" required>
                     </div>
-                </div>
-                <!-- Form -->
-                <form class="mt-4 mb-3 d-md-none">
-                    Hi, Sri Ram E-Sevai Maiyam <div class="input-group input-group-rounded input-group-merge">
-                        <input type="search" class="form-control form-control-rounded form-control-prepended" id="search_box_mobile" placeholder="Search" aria-label="Search">
-                        <div class="input-group-prepend">
-                            <div class="input-group-text">
-                                <span class="fa fa-search"></span>
-                            </div>
-                        </div>
+                    <div>
+                        <label for="d.o.b" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">D.O.B</label>
+                        <input type="date" name="d.o.b" id="d.o.b" placeholder="date od birth" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" required>
                     </div>
+                    <div>
+                        <label for="address" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Address</label>
+                        <input type="text" name="address" id="address" placeholder="address" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" required>
+                    </div>
+                    <button type="submit" class="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Create</button>
                 </form>
-                <!-- Navigation -->
-                <ul class="navbar-nav">
-                    <!--                                <li class="nav-item">
-                                                                    <a class="nav-link" href="#">
-                                                                        <i class="ni ni-money-coins text-primary"></i> <b>Smart Wallet: 0</b>
-                                                                    </a>
-                                                                </li>-->
-                    <li class="nav-item">
-                        <a class="nav-link" href="http://localhost/srirameseva/">
-                            <i class="ni ni-shop text-primary"></i> Dashboard
-                        </a>
-                    </li>
-                    <!-- <li class="nav-item">
-                                            <a class="nav-link" href="https://www.tndigitalseva.in/my-bookmarks">
-                                                <i class="ni ni-book-bookmark text-primary"></i> My Bookmarks
-                                            </a>
-                                        </li> -->
-                    <li class="nav-item">
-                        <a class="nav-link" href="http://localhost/srirameseva/services">
-                            <i class="ni ni-archive-2 text-primary"></i> Public Services
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="http://localhost/srirameseva/notification">
-                            <i class="ni ni-notification-70 text-primary"></i> Current Notification
-                        </a>
-                    </li>
-                    <!--                                        <li class="nav-item">
-                                                                                    <a class="nav-link" href="https://www.tndigitalseva.in/premium">
-                                                                                        <i class="ni ni-app text-primary"></i> Legal Services
-                                                                                    </a>
-                                                                                </li>-->
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="http://localhost/srirameseva/serviceforms">
-                            <i class="ni ni-collection text-primary"></i> Service Forms
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="http://localhost/srirameseva/customers">
-                            <i class="ni ni-bullet-list-67 text-primary"></i> Customer Report
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="http://localhost/srirameseva/billing">
-                            <i class="fa fa-list-alt text-primary"></i> Billing Report</a>
-                    </li>
-                    <!-- <li class="nav-item">
-                                            <a class="nav-link" href="https://www.tndigitalseva.in/services/agency">
-                                                <i class="ni ni-image text-primary"></i> Advertisement Ads
-                                            </a>
-                                        </li> -->
-                    <!-- <li class="nav-item">
-                                            <a class="nav-link" href="https://www.tndigitalseva.in/tools">
-                                                <i class="ni ni-settings text-primary"></i> System Softwares
-                                            </a>
-                                        </li>  -->
-                    <!--<li class="nav-item">
-                                                                                        <a class="nav-link" href="https://www.tndigitalseva.in/services/tutorial">
-                                                                                            <i class="ni ni-button-play text-primary"></i> Tutorial Video
-                                                                                        </a>
-                                                                                    </li>-->
-                    <!-- <li class="nav-item">
-                                                    <a class="nav-link " href="https://www.tndigitalseva.in/services/market"><i class="ni ni-tv-2 text-primary"></i> Market Place</a>
-                                                </li>
-                                                <li class="nav-item">
-                                                    <a class="nav-link " href="https://www.tndigitalseva.in/services/how"><i class="ni ni-spaceship text-primary"></i> How to use</a>
-                                                </li> -->
-                    <!--                                        <li class="nav-item dropdown">
-                                            <a class="nav-link nav-link-icon" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                <i class="ni ni-bullet-list-67 text-primary"></i> Business
-                                            </a>
-                                            <div class="dropdown-menu dropdown-menu-arrow dropdown-menu-right" aria-labelledby="navbar-default_dropdown_1">
-                                                <a class="nav-link " href="https://www.tndigitalseva.in/services/market"><i class="ni ni-tv-2 text-primary"></i> Market Place</a>
-                                                <a class="nav-link " href="https://www.tndigitalseva.in/services/how"><i class="ni ni-spaceship text-primary"></i> How to use</a>
-                                                <a class="nav-link" href="https://www.tndigitalseva.in/services/request">
-                                                    <i class="ni ni-bullet-list-67 text-primary"></i>  Update Request
-                                                </a>
-                                            </div>
-                                        </li>-->
-
-                    <!--                                        <li class="nav-item">
-                                                                                    <a class="nav-link" href="https://www.tndigitalseva.in/services/products">
-                                                                                        <i class="ni ni-tv-2 text-primary"></i> Services <span class="badge badge-success">
-<div style="border:1px solid #990000;padding-left:20px;margin:0 0 10px 0;">
-
-<h4>A PHP Error was encountered</h4>
-
-<p>Severity: Notice</p>
-<p>Message:  Undefined variable: pending_service_requests</p>
-<p>Filename: includes/header.php</p>
-<p>Line Number: 548</p>
-
-
-	<p>Backtrace:</p>
-	
-		
-	
-		
-	
-		
-			<p style="margin-left:10px">
-			File: /home/tndigitalseva/public_html/application/views/includes/header.php<br />
-			Line: 548<br />
-			Function: _error_handler			</p>
-
-		
-	
-		
-	
-		
-	
-		
-			<p style="margin-left:10px">
-			File: /home/tndigitalseva/public_html/application/views/dashboard.php<br />
-			Line: 1<br />
-			Function: view			</p>
-
-		
-	
-		
-	
-		
-	
-		
-			<p style="margin-left:10px">
-			File: /home/tndigitalseva/public_html/application/controllers/Login.php<br />
-			Line: 687<br />
-			Function: view			</p>
-
-		
-	
-		
-	
-		
-	
-		
-			<p style="margin-left:10px">
-			File: /home/tndigitalseva/public_html/index.php<br />
-			Line: 292<br />
-			Function: require_once			</p>
-
-		
-	
-
-</div></span> 
-                                                                                        <i class="ni ni-archive-2 text-primary"></i> Shopping zone 
-                                                                                    </a>
-                                                                                </li>-->
-                    <!--<li class="nav-item">
-                                            <a class="nav-link" href="https://www.tndigitalseva.in/services/csp">
-                                                <i class="ni ni-app text-primary"></i> CSP Services
-                                            </a>
-                                        </li>-->
-                    <!--                                        <li class="nav-item">
-                                                                                    <a class="nav-link" href="javascript:void(0)" data-toggle="modal" data-target="#servicerequestModal">
-                                                                                        <i class="ni ni-tv-2 text-primary"></i> Service Request
-                                                                                    </a>
-                                                                                </li> -->
-
-                    <!--                                        <li class="nav-item">
-                                                                                    <a class="nav-link " href="https://www.tndigitalseva.in/services/package"><i class="ni ni-chart-bar-32 text-primary"></i> Package Details</a>
-                                                                                </li>-->
-
-                    <!--<li class="nav-item">
-                                            <a class="nav-link" href="https://www.tndigitalseva.in/customers">
-                                                <i class="ni ni-books text-primary"></i> Data Bank</a>
-                                        </li>-->
-
-                    <!--                                            <li>
-                                                                                        <a class="nav-link" href="https://t.me/joinchat/AAAAAEbUnvox2LyotXbRLA" target="_blank">
-                                                                                            <i class="fa fa-comment text-info"></i> Join Telegram
-                                                                                        </a>
-                                                                                    </li>-->
-
-
-
-                </ul>
-                <!-- Divider -->
-                <!--        <hr class="my-3">-->
-                <!-- Heading -->
-                <!--        <h6 class="navbar-heading text-muted">Documentation</h6>-->
-                <!-- Navigation -->
-                <!--        <ul class="navbar-nav mb-md-3">
-                                  <li class="nav-item">
-                                    <a class="nav-link" href="https://demos.creative-tim.com/argon-dashboard/docs/getting-started/overview.html">
-                                      <i class="ni ni-spaceship"></i> Getting started
-                                    </a>
-                                  </li>
-                                  <li class="nav-item">
-                                    <a class="nav-link" href="https://demos.creative-tim.com/argon-dashboard/docs/foundation/colors.html">
-                                      <i class="ni ni-palette"></i> Foundation
-                                    </a>
-                                  </li>
-                                  <li class="nav-item">
-                                    <a class="nav-link" href="https://demos.creative-tim.com/argon-dashboard/docs/components/alerts.html">
-                                      <i class="ni ni-ui-04"></i> Components
-                                    </a>
-                                  </li>
-                                </ul>-->
             </div>
         </div>
-    </nav> <!-- Main content -->
-    <form action="http://localhost/srirameseva/customer/createCustomer" method="post">
-        <input type='text' name='search' />
-        <button>search</button>
-    </form>
-    <div class="main-content">
-        <!-- Top navbar -->
-        <nav class="navbar navbar-top navbar-expand-md navbar-dark" id="navbar-main">
-            <div class="container-fluid">
-                <!-- Brand -->
-                <a class="h4 mb-0 text-white text-uppercase d-none d-lg-inline-block" href="">Customers</a>
-                <!-- Form -->
-                <form class="navbar-search navbar-search-dark form-inline mr-3 d-none d-md-flex ml-lg-auto">
-                    <div class="form-group mb-0">
-                        <div class="input-group input-group-alternative">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text"><i class="fas fa-search"></i></span>
+    </div>
+</div>
+
+<!-- Start block -->
+<section class="bg-gray-50 dark:bg-gray-900 p-3 sm:p-5 antialiased">
+    <div class="mx-auto max-w-screen-2xl px-4 lg:px-12">
+        <div class="bg-white dark:bg-gray-800 relative shadow-md sm:rounded-lg overflow-hidden">
+            <div class="flex flex-col md:flex-row items-stretch md:items-center md:space-x-3 space-y-3 md:space-y-0 justify-between mx-4 py-4 border-t dark:border-gray-700">
+                <div class="w-full md:w-1/2">
+                    <form class="flex items-center" action="http://localhost/srirameseva/customers/searchResult" method="post">
+                        <label for="simple-search" class="sr-only">Search</label>
+                        <div class="relative w-full">
+                            <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+                                <svg aria-hidden="true" class="w-5 h-5 text-gray-500 dark:text-gray-400" fill="currentColor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" />
+                                </svg>
                             </div>
-                            <input class="form-control" id="search_box" placeholder="Search" type="text">
+                            <input type="text" name="search" id="search" placeholder="Search mobile number" required="" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-teal-500 focus:border-teal-500 block w-full pl-10 p-2 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-teal-500 dark:focus:border-teal-500">
                         </div>
-                    </div>
-                </form>
-                <!-- User -->
-                <ul class="navbar-nav align-items-center d-none d-md-flex">
-                    <!--                        <li class="nav-item dropdown">
-                                                    <a class="nav-link nav-link-icon" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                        <i class="ni ni-bell-55" onclick="update_notifications();"></i><span class="notification  notification-data-count" onclick="update_notifications();">0</span>
-                                                    </a>
-                                                    <div class="dropdown-menu dropdown-menu-arrow dropdown-menu-right" aria-labelledby="navbar-default_dropdown_1">
-                                                        <div class="list-group list-group-flush notification-data">
-                                                        </div>
-                                                    </div>
-                                                </li>-->
-                    <li class="nav-item dropdown">
-                        <a class="nav-link pr-0" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <div class="media align-items-center">
-                                <span class="avatar avatar-sm rounded-circle">
-                                    <img alt="Image placeholder" src="https://www.tndigitalseva.in/uploads/profile/profile_image_1756947120-10-202216-35-08191364ljdx2XV_400x400.jpg">
-                                </span>
-                                <div class="media-body ml-2 d-none d-lg-block">
-                                    <span class="mb-0 text-sm  font-weight-bold">Sri Ram E-Sevai Maiyam</span>
-                                </div>
-                            </div>
-                        </a>
-                        <div class="dropdown-menu dropdown-menu-arrow dropdown-menu-right">
-                            <div class=" dropdown-header noti-title">
-                                <h6 class="text-overflow m-0">Welcome!</h6>
-                            </div>
-                            <a href="https://www.tndigitalseva.in/users/profile" class="dropdown-item">
-                                <i class="ni ni-single-02"></i>
-                                <span>My profile</span>
-                            </a>
-                            <!--<a href="./examples/profile.html" class="dropdown-item">
-                                  <i class="ni ni-settings-gear-65"></i>
-                                  <span>Settings</span>
-                                </a>
-                                <a href="./examples/profile.html" class="dropdown-item">
-                                  <i class="ni ni-calendar-grid-58"></i>
-                                  <span>Activity</span>
-                                </a>
-                                <a href="./examples/profile.html" class="dropdown-item">
-                                  <i class="ni ni-support-16"></i>
-                                  <span>Support</span>
-                                </a>-->
-                            <div class="dropdown-divider"></div>
-                            <a href="https://www.tndigitalseva.in/logout" class="dropdown-item">
-                                <i class="ni ni-user-run"></i>
-                                <span>Logout</span>
-                            </a>
-                        </div>
-                    </li>
-
-                </ul>
-            </div>
-        </nav>
-        <!-- Header -->
-        <style>
-            .card {
-                box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2);
-                transition: 0.3s;
-            }
-
-            .card:hover {
-                box-shadow: 0 9px 18px 0 rgba(0, 0, 0, 0.2);
-            }
-        </style>
-        <!-- Header -->
-        <div class="header bg-gradient-primary pb-8 pt-5 pt-md-8">
-            <div class="container-fluid">
-                <div class="header-body">
-                    <div id="alertMessage" class="row">
-                        <div class="col-md-12">
-
-
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Page content -->
-        <div class="container-fluid mt--7">
-
-            <!-- Table -->
-            <div class="row">
-                <div class="col">
-                    <div class="card shadow">
-                        <div class="card-header border-0">
-                            <form action="http://localhost/srirameseva/customers/createCustomer" method="post" enctype="multipart/form-data">
-                                <div class="row">
-                                    <div class="col-md-2">
-                                        <input type="text" class="form-control form-control-sm" name="name" id="name" required placeholder="Name">
-                                    </div>
-                                    <div class="col-md-2">
-                                        <input type="text" class="form-control form-control-sm" name="mobile" id="mobile" required placeholder="Mobile">
-                                    </div>
-                                    <div class="col-md-2">
-                                        <input type="text" class="form-control form-control-sm" name="address" id="address" placeholder="Address">
-                                    </div>
-                                    <!-- <div class="col-md-1">
-                                <input type="text" class="form-control form-control-sm" name="ref_1" id="ref_1" placeholder="Text">
-                            </div>
-                            <div class="col-md-1">
-                                <input type="text" class="form-control form-control-sm" name="ref_2" id="ref_2" placeholder="Text">
-                            </div> -->
-                                    <!--<div class="col">-->
-                                    <!--    <a href="javascript:void(0)" class="btn btn-sm" onclick="selectfile();">Choose File</a>-->
-                                    <!--    <input type="file" class="form-control form-control-sm" name="ref_3" id="ref_3"placeholder="Reference 3" style="display:none;">-->
-                                    <!--    <span class="text-danger" id="ref_3_error"></span>-->
-                                    <!--</div>-->
-                                    <!-- <div class="col-md-1">
-                                                     
-                                                     <input type="text" class="form-control form-control-sm" name="ref_3" id="ref_3" placeholder="Remarks">
-                                                 </div> -->
-                                    <!-- <div class="col-md-1">
-                                                     <select class="form-control form-control-sm" name="ref_4" id="ref_4">
-                                                         <option value="0">Status</option>
-                                                         <option>Pending</option>
-                                                         <option>Process</option>
-                                                         <option>Hold</option>
-                                                         <option>Complete</option>
-                                                         <option>Return</option>
-                                                          <option>Reject</option>   
-                                                          <option>Refunded</option>
-                                                         </select>
-                                                 </div> -->
-                                    <div class="col">
-                                        <input type="submit" class="btn btn-sm text-primary" value="+ Add">
-                                        <a href="#" class="" onclick="exportTableToExcel('customers_details_table', 'Customer Report')">
-                                            <svg style="color: rgb(42, 119, 8);" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-file-earmark-excel" viewBox="0 0 16 16">
-                                                <path d="M5.884 6.68a.5.5 0 1 0-.768.64L7.349 10l-2.233 2.68a.5.5 0 0 0 .768.64L8 10.781l2.116 2.54a.5.5 0 0 0 .768-.641L8.651 10l2.233-2.68a.5.5 0 0 0-.768-.64L8 9.219l-2.116-2.54z" fill="#2a7708"></path>
-                                                <path d="M14 14V4.5L9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2zM9.5 3A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h5.5v2z" fill="#2a7708"></path>
-                                            </svg>
-                                        </a>
-                                        <a href="#" class="" onclick="exportTableToPdf('customers_details_table', 'Customer Report')">
-                                            <svg style="color: red" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-file-pdf" viewBox="0 0 16 16">
-                                                <path d="M4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4zm0 1h8a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z" fill="red"></path>
-                                                <path d="M4.603 12.087a.81.81 0 0 1-.438-.42c-.195-.388-.13-.776.08-1.102.198-.307.526-.568.897-.787a7.68 7.68 0 0 1 1.482-.645 19.701 19.701 0 0 0 1.062-2.227 7.269 7.269 0 0 1-.43-1.295c-.086-.4-.119-.796-.046-1.136.075-.354.274-.672.65-.823.192-.077.4-.12.602-.077a.7.7 0 0 1 .477.365c.088.164.12.356.127.538.007.187-.012.395-.047.614-.084.51-.27 1.134-.52 1.794a10.954 10.954 0 0 0 .98 1.686 5.753 5.753 0 0 1 1.334.05c.364.065.734.195.96.465.12.144.193.32.2.518.007.192-.047.382-.138.563a1.04 1.04 0 0 1-.354.416.856.856 0 0 1-.51.138c-.331-.014-.654-.196-.933-.417a5.716 5.716 0 0 1-.911-.95 11.642 11.642 0 0 0-1.997.406 11.311 11.311 0 0 1-1.021 1.51c-.29.35-.608.655-.926.787a.793.793 0 0 1-.58.029zm1.379-1.901c-.166.076-.32.156-.459.238-.328.194-.541.383-.647.547-.094.145-.096.25-.04.361.01.022.02.036.026.044a.27.27 0 0 0 .035-.012c.137-.056.355-.235.635-.572a8.18 8.18 0 0 0 .45-.606zm1.64-1.33a12.647 12.647 0 0 1 1.01-.193 11.666 11.666 0 0 1-.51-.858 20.741 20.741 0 0 1-.5 1.05zm2.446.45c.15.162.296.3.435.41.24.19.407.253.498.256a.107.107 0 0 0 .07-.015.307.307 0 0 0 .094-.125.436.436 0 0 0 .059-.2.095.095 0 0 0-.026-.063c-.052-.062-.2-.152-.518-.209a3.881 3.881 0 0 0-.612-.053zM8.078 5.8a6.7 6.7 0 0 0 .2-.828c.031-.188.043-.343.038-.465a.613.613 0 0 0-.032-.198.517.517 0 0 0-.145.04c-.087.035-.158.106-.196.283-.04.192-.03.469.046.822.024.111.054.227.09.346z" fill="red"></path>
-                                            </svg>
-                                        </a>
-                                    </div>
-                                </div>
-                            </form>
-
-                        </div>
-                        <div class="card-body" id="customer_div">
-
-                            <div class="col-12 table-responsive" style="display:block; overflow:auto; height:400px;">
-                                <table id="customers_details_table" class="table align-items-center table-flush">
-                                    <thead class="thead-light">
-                                        <tr>
-                                            <!--<th>Created</th>-->
-                                            <th>Name</th>
-                                            <th>Mobile</th>
-                                            <th>Address</th>
-                                            <!--                                        <th>Subject</th>-->
-                                            <th>Add New</th>
-                                            <th>Edit</th>
-                                            <th>Delete</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <?php
-                                        $customerData = $this->data["customerData"];
-                                        foreach ($customerData as $key => $value) {
-                                        ?>
-                                            <tr>
-                                                <td><?php echo $value["name"]; ?></td>
-                                                <td><?php echo $value["mobile"]; ?></td>
-                                                <td><?php echo $value["address"]; ?></td>
-                                                <td><img class="open-button" onclick="openForm()" src="https://www.tndigitalseva.in/assets/images/bill.png" width="30px"></td>
-                                                </button>
-                                            </tr>
-                                        <?php
-                                        }
-                                        ?>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-
-                <div id="telegramModal" class="modal fade" role="dialog">
-                    <div class="modal-dialog modal-sm">
-
-                        <!-- Modal content-->
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h4 class="modal-title">Join Group</h4>
-                                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                            </div>
-                            <div class="modal-body">
-                                <a href="https://t.me/tndigitaleseva" target="_blank">
-                                    <img src="https://www.tndigitalseva.in/assets/panel/img/telegram.png" width="100%">
-                                </a>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-
-                <div class="modal fade" id="servicerequestModal" role="dialog">
-                    <div class="modal-dialog">
-                        <form id="create-request-form" role="form" action="https://www.tndigitalseva.in/services/create_request" method="post" enctype="multipart/form-data">
-                            <!-- Modal content-->
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <!--                    <h4 id="exampleModalLabel" class="modal-title">Add New Request</h4>-->
-                                    <button type="button" data-dismiss="modal" aria-label="Close" class="close"><i class="ni ni-fat-remove"></i></button>
-                                </div>
-                                <div class="modal-body">
-                                    <div class="pl-lg-4">
-                                        <div class="row">
-                                            <div class="col-lg-12">
-                                                <div class="form-group">
-                                                    <label class="form-control-label" for="input-request-name">Description</label>
-                                                    <textarea id="input-request-name" name="input-request-name" class="form-control form-control-alternative"></textarea>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="row" id="input-request-url-div">
-                                            <div class="col-lg-6">
-                                                <div class="form-group">
-                                                    <label class="form-control-label" for="input-request-url">Url</label>
-                                                    <input type="url" id="input-request-url" name="input-request-url" class="form-control form-control-alternative" placeholder="http//:">
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-6">
-                                                <div class="form-group">
-                                                    <label class="form-control-label" for="input-request-file">File</label>
-                                                    <input type="file" id="input-request-file" name="input-request-file" class="form-control form-control-alternative">
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <h3>
-                                            <!--                            Help Line : 8098419171<br>-->
-                                        </h3>
-                                    </div>
-                                </div>
-                                <div class="modal-footer">
-                                    <input type="submit" class="btn btn-primary" value="Submit">
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-                <div id="whatsappModal" class="modal fade" role="dialog">
-                    <div class="modal-dialog ">
-
-                        <!-- Modal content-->
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                            </div>
-                            <div class="modal-body">
-                                <a href="http://wa.me/918098419171" target="_blank">
-                                    <img src="https://www.tndigitalseva.in/assets/images/send-me.jpeg" width="100%">
-                                </a>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-                <script>
-                    //$("#customer_bill").val("");
-                    $("#billing_form").attr('autocomplete', 'off'); // Switching form autocomplete attribute to off
-                    function openForm() {
-                        $("#billingForm").animate({
-                            width: '670px',
-                            right: '15px'
-                        });
-
-                        $("#customer_bill").focus();
-                    }
-
-                    function closeForm() {
-                        $("#billingForm").animate({
-                            width: '0px',
-                            right: '0px'
-                        });
-                    }
-
-                    function add_serivce_bill() {
-                        var rowCount = $('#service_bill_table tbody tr').length;
-                        var delete_onclick = "delete_bill_data('" + rowCount + "')";
-                        var markup = '<tr>' +
-                            '<td><span style="backgroumd-color:#fff;cursor: pointer;"  id="bill_record' + rowCount + '" onclick="' + delete_onclick + '"><i class="fa fa-trash"></i></span></td>' +
-                            '<td><input type="text" name="bill_service_name[]" required></td>' +
-                            '<td><select name="bill_service_type[]" id="bill_service_type' + rowCount + '" required><option>Credit</option><option>Debit</option></select></td>' +
-                            '<td><select name="bill_service_mode[]" id="bill_service_mode' + rowCount + '" required><option>Cash</option><option>UPI</option></select></td>' +
-                            '<td><select name="bill_service_status[]" id="bill_service_status' + rowCount + '" required><option value="1">Paid</option><option value="2">Unpaid</option><option value="3">Partially Paid</option></select></td>' +
-                            '<td><input type="text" name="bill_service_amount[]" class="bill_service_amount" id="bill_service_amount' + rowCount + '" onkeyup="sum_service_total(' + rowCount + ')" required style="width:70px;"></td>' +
-                            '<td><input type="text" name="bill_service_commission[]" class="bill_service_commission" id="bill_service_commission' + rowCount + '" onkeyup="sum_service_total(' + rowCount + ')" required style="width:70px;"></td>' +
-                            '<td><input type="text" name="bill_service_total[]" class="bill_service_total"  id="bill_service_total' + rowCount + '" required style="width:70px;" readonly></td>' +
-                            '<td><input type="text" name="bill_service_balance[]" class="bill_service_balance"  id="bill_service_balance' + rowCount + '" required style="width:70px;"></td>' +
-                            '<tr>';
-                        $("#service_bill_table tbody").append(markup);
-                    }
-
-                    function delete_bill_data(id) {
-                        $("#bill_record" + id).parents("tr").remove();
-                    }
-
-                    function sum_service_total(count) {
-                        var sum = 0;
-                        var bill_service_amount = parseInt($("#bill_service_amount" + count).val());
-                        var bill_service_commission = parseInt($("#bill_service_commission" + count).val());
-                        var bill_service_type = $("#bill_service_type" + count).val();
-                        if (isNaN(bill_service_amount)) {
-                            bill_service_amount = 0;
-                        }
-                        if (isNaN(bill_service_commission)) {
-                            bill_service_commission = 0;
-                        }
-                        if (bill_service_type == "Credit") {
-                            sum = bill_service_amount + bill_service_commission;
-                            $("#bill_service_amount" + count).val(Math.abs(bill_service_amount));
-                            $("#bill_service_commission" + count).val(Math.abs(bill_service_commission));
-                            $("#bill_service_total" + count).val(Math.abs(sum));
-                        } else {
-                            sum -= bill_service_amount + bill_service_commission;
-                            $("#bill_service_amount" + count).val(-Math.abs(bill_service_amount));
-                            $("#bill_service_commission" + count).val(-Math.abs(bill_service_commission));
-                            $("#bill_service_total" + count).val(-Math.abs(sum));
-                        }
-
-                        var total = 0;
-                        $(".bill_service_total").each(function() {
-                            total += +$(this).val();
-                        });
-                        $("#bill_total").val(total.toFixed(2));
-                    }
-                    $(document).on("keyup", ".bill_service_amount", function() {
-                        var sum = 0;
-                        $(".bill_service_amount").each(function() {
-                            sum += +$(this).val();
-                        });
-                        $("#bill_service_amount_total").val(sum.toFixed(2));
-                    });
-                    $(document).on("keyup", ".bill_service_commission", function() {
-                        var sum = 0;
-                        $(".bill_service_commission").each(function() {
-                            sum += +$(this).val();
-                        });
-                        $("#bill_service_commission_total").val(sum.toFixed(2));
-                    });
-                    add_serivce_bill();
-                </script> <!--Add New Customer-->
-                <div class="modal fade" id="add_customer" role="dialog">
-                    <div class="modal-dialog">
-                        <form id="create-customer-form" role="form" action="https://www.tndigitalseva.in/customers/create" method="post" enctype="multipart/form-data">
-                            <!-- Modal content-->
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h4 id="exampleModalLabel" class="modal-title">Add New Customer</h4>
-                                    <button type="button" data-dismiss="modal" aria-label="Close" class="close"><i class="ni ni-fat-remove"></i></button>
-                                </div>
-                                <div class="modal-body">
-                                    <div class="pl-lg-4">
-                                        <div class="row">
-                                            <div class="col-lg-12">
-                                                <div class="form-group">
-                                                    <label class="form-control-label" for="input-customer-name">Title</label>
-                                                    <input type="text" id="input-customer-name" name="input-customer-name" class="form-control form-control-alternative" placeholder="Name" required>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-lg-12" style="display:none;">
-                                                <div class="form-group">
-                                                    <label class="form-control-label" for="input-customer-father">Sub Title</label>
-                                                    <input type="hidden" id="input-customer-father" name="input-customer-father" class="form-control form-control-alternative" placeholder="Sub Title" value="0" required>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-lg-12" style="display:none;">
-                                                <div class="form-group">
-                                                    <label class="form-control-label" for="input-customer-mobile">Sub Title</label>
-                                                    <input type="hidden" id="input-customer-mobile" name="input-customer-mobile" class="form-control form-control-alternative" placeholder="Sub Title" value="0" required>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-lg-12" style="display:none;">
-                                                <div class="form-group">
-                                                    <label class="form-control-label" for="input-customer-aadhar">Sub Title</label>
-                                                    <input type="hidden" id="input-customer-aadhar" name="input-customer-aadhar" class="form-control form-control-alternative" placeholder="Sub Title" value="0" required>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="modal-footer">
-                                    <input type="submit" class="btn btn-primary" value="Create" onclick="create_processing();">
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-                <div class="modal fade" id="receipt_customer" role="dialog">
-                    <div class="modal-dialog modal-lg">
-                        <!-- Modal content-->
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h4 id="exampleModalLabel" class="modal-title">Receipt</h4>
-                                <button type="button" data-dismiss="modal" aria-label="Close" class="close"><i class="ni ni-fat-remove"></i></button>
-                            </div>
-                            <div class="modal-body">
-                                <div id="receipt_area" style="font-family: Open Sans, sans-serif;border:2px solid gray;border-radius: 5px;padding: 10px;">
-                                    <table width="100%">
-                                        <tr colspan="2">
-                                            <center>
-                                                <h1><u>Tips for your Note</u></h1>
-                                            </center>
-                                        </tr>
-                                        <tr>
-
-                                            <td valign="top">
-                                                <h3>
-                                                    Date: 19-07-2023<br>
-                                                    Time: 07:38:05 PM </h3>
-                                                <h3>Name:<span id="receipt_customer_name"></span></h3>
-                                                <h3>Mobile:<span id="receipt_customer_mobile"></span></h3>
-                                            </td>
-                                            <td valign="top">
-                                                <h3>FOR YOUR REFERENCE</h3>
-                                                <h3><span id="receipt_customer_service"></span></h3>
-                                                <h3><span id="receipt_customer_text1"></span></h3>
-                                                <h3><span id="receipt_customer_text2"></span></h3>
-                                                <h3><span id="receipt_customer_text3"></span></h3>
-                                                <h3><span id="receipt_customer_text4"></span></h3>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td style="border-top:1px solid black;border-bottom:1px solid black;">
-                                                <img src="https://www.tndigitalseva.in/assets/web/img/logo-lg.png" width="200px" height="45px">
-
-                                            </td>
-                                            <td style="border-top:1px solid black;border-bottom:1px solid black;">
-                                                <h1>Sri Ram E-Sevai Maiyam</h1>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td valign="top" style="width:50% !important;">
-                                                <h3>Mobile: 9159156888</h3>
-                                                <h3>Mail id: sriramesevaimaiyam@gmail.com</h3>
-                                            </td>
-                                            <td>
-                                                <h3>
-                                                    ADDRESS:<br>
-                                                    No: 32 Hospital Road, Sivagiri-638109, ,Kodumudi, Erode </h3>
-                                            </td>
-                                        </tr>
-                                    </table>
-                                </div>
-                                <center>
-                                    <a href="javascript:void(0);" id="print_btn" class="btn btn-primary">Print</a>
-                                </center>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-                <div class="modal fade" id="update_customer" role="dialog">
-                    <div class="modal-dialog modal-lg">
-                        <!-- Modal content-->
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h4 id="exampleModalLabel" class="modal-title">Update Customer</h4>
-                                <button type="button" data-dismiss="modal" aria-label="Close" class="close"><i class="ni ni-fat-remove"></i></button>
-                            </div>
-                            <div class="modal-body">
-                                <form id="update_form" action="" method="post" enctype="multipart/form-data">
-                                    <div class="row">
-                                        <div class="col-md-4">
-                                            Name
-                                            <input type="text" name="customer_name" id="update_customer_name" class="form-control form-control-sm">
-                                        </div>
-                                        <div class="col-md-4">
-                                            Mobile
-                                            <input type="text" name="customer_mobile" id="update_customer_mobile" class="form-control form-control-sm">
-                                        </div>
-                                        <div class="col-md-4">
-                                            Service
-                                            <input type="text" name="customer_service" id="update_customer_service" class="form-control form-control-sm">
-                                        </div>
-                                        <div class="col-md-4">
-                                            Text
-                                            <input type="text" name="customer_text1" id="update_customer_text1" class="form-control form-control-sm">
-                                        </div>
-                                        <div class="col-md-4">
-                                            Text
-                                            <input type="text" name="customer_text2" id="update_customer_text2" class="form-control form-control-sm">
-                                        </div>
-                                        <div class="col-md-4">
-                                            Remark
-                                            <input type="text" name="customer_text3" id="update_customer_text3" class="form-control form-control-sm">
-                                        </div>
-                                        <div class="col-md-4">
-                                            Status
-                                            <select name="customer_text4" id="update_customer_text4" class="form-control form-control-sm">
-                                                <option></option>
-                                                <option>Pending</option>
-                                                <option>Process</option>
-                                                <option>Hold</option>
-                                                <option>Complete</option>
-                                                <option>Return</option>
-                                                <option>Reject</option>
-                                                <option>Refunded</option>
-                                            </select>
-                                        </div>
-                                        <div class="col-md-12">
-                                            <center>
-                                                <span class="text-danger" id="update_customer_file_error"></span>
-                                                <br>
-                                                <input type="submit" class="btn btn-primary btn-sm" value="Update">
-                                            </center>
-                                        </div>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-                <div class="modal fade" id="delete_customer" role="dialog">
-                    <div class="modal-dialog">
-                        <!-- Modal content-->
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h4 id="exampleModalLabel" class="modal-title">Delete Customer</h4>
-                                <button type="button" data-dismiss="modal" aria-label="Close" class="close"><i class="ni ni-fat-remove"></i></button>
-                            </div>
-                            <div class="modal-body">
-                                <h3>Are you sure want to delete?</h3>
-                            </div>
-                            <div class="modal-footer">
-                                <a href="" class="btn btn-danger" id="delete_btn">Delete</a>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-                <div class="billing-popup" id="billingForm">
-                    <form id="billing_form" action="https://www.tndigitalseva.in/billing/create_bill" class="form-container" method="post" onsubmit="processing_form();">
-                        <!--        <h3>Billing</h3>-->
-                        <div class="row">
-                            <div class="col-md-11">
-
-                                <label for="customer_bill"><b>Customer</b></label>
-                                <div class="row">
-                                    <div class="col-md-3">
-
-                                        <input type="text" id="customer_bill" class="form-control form-control-sm" name="customer_name" placeholder="Name">
-                                    </div>
-                                    <div class="col-md-3">
-                                        <input type="number" id="customer_mobile" class="form-control form-control-sm" name="customer_mobile" placeholder="Mobile">
-                                    </div>
-                                    <div class="col-md-3">
-                                        <input type="text" id="bill_date" name="bill_date" class="form-control form-control-sm datepicker" placeholder="Bill_date" value="19-07-2023" required>
-                                    </div>
-                                    <div class="col-md-3">
-                                        <select class="form-control select2 form-control-sm" name="biller" required>
-                                            <option value="">Biller</option>
-                                            <option value='15'>System 1</option>
-                                            <option value='29'>server </option>
-                                            <option value='30'>system 2</option>
-                                            <option value='31'>system 3</option>
-                                            <option value='50'>avita lap</option>
-                                        </select>
-                                    </div>
-                                </div>
-
-
-                            </div>
-                            <div class="col-md-1 text-right">
-                                <button class="btn btn-danger btn-sm" align="right" type="button" onclick="closeForm()"><i class="fa fa-times"></i></button>
-                            </div>
-                        </div>
-                        <!--        <label for="bill_div"><b>Services</b></label>-->
-
-                        <div id="bill_div" class="bill_div table-responsive" width="600px">
-                            <table class="table" id="service_bill_table">
-                                <thead>
-                                    <tr>
-                                        <th><span style="backgroumd-color:#fff;cursor: pointer;" onclick="add_serivce_bill();"><i class="fa fa-plus"></i></span></th>
-                                        <th>Service</th>
-                                        <th>Type</th>
-                                        <th>Mode</th>
-                                        <th>Status</th>
-                                        <th>Payment</th>
-                                        <th>Commission</th>
-                                        <th>Total</th>
-                                        <th>Balance</th>
-                                    <tr>
-                                </thead>
-                                <tbody>
-
-                                </tbody>
-                                <tfoot>
-                                    <tr>
-                                        <th colspan="5">Total</th>
-                                        <th><input type="text" name="bill_service_amount_total" class="bill_service_amount_total" id="bill_service_amount_total" required style="width:70px;" readonly></th>
-                                        <th><input type="text" name="bill_service_commission_total" class="bill_service_commission_total" id="bill_service_commission_total" required style="width:70px;" readonly></th>
-                                        <th><input type="text" name="bill_total" class="bill_total" id="bill_total" required style="width:70px;" readonly></th>
-                                    <tr>
-                                </tfoot>
-                            </table>
-                        </div>
-                        <div class="text-right">
-                            <button type="submit" class="btn btn-primary btn-sm">Submit</button>
-                        </div>
+                        <!-- <button type="button" id="createProductButton" data-modal-toggle="createProductModal" class="flex items-center justify-center text-white bg-teal-700 hover:bg-teal-800 focus:ring-4 focus:ring-teal-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-teal-600 dark:hover:bg-teal-700 focus:outline-none dark:focus:ring-teal-800">
+                            Search
+                        </button> -->
                     </form>
                 </div>
-
-
-                <script>
-                    $(document).ready(function() {
-                        $("#search_box").on("keyup", function() {
-                            var value = $(this).val().toLowerCase();
-                            console.log(value);
-                            $("#customers_details_table tbody tr").filter(function() {
-                                $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
-                            });
-                        });
-                        $('.category').on('click', function(e) {
-                            e.preventDefault();
-                            var cat = $(this).data('categoryType');
-
-                            $('#customer_div > div').hide();
-                            $('#customer_div > div[data-category-type="' + cat + '"]').show();
-
-                        });
-
-                    });
-
-                    function create_processing() {
-                        $('#processing').modal('show');
-                        $('#create-customer-form').submit();
-                        event.preventDefault();
-                    }
-
-                    function receipt_customer(id, name, mobile, service, text1, text2, text3, text4) {
-                        // $("#update_form").attr("action", "https://www.tndigitalseva.in/customers/update/" + id)
-                        $("#receipt_customer_name").text(name);
-                        $("#receipt_customer_mobile").text(mobile);
-                        $("#receipt_customer_service").text(service);
-                        $("#receipt_customer_text1").text(text1);
-                        $("#receipt_customer_text2").text(text2);
-                        $("#receipt_customer_text3").text(text3);
-                        $("#receipt_customer_text4").text(text4);
-                        $("#receipt_customer").modal("show");
-                    }
-
-                    function update_customer(id, name, mobile, service, text1, text2, text3, text4) {
-                        $("#update_form").attr("action", "https://www.tndigitalseva.in/customers/update/" + id)
-                        $("#update_customer_name").val(name);
-                        $("#update_customer_mobile").val(mobile);
-                        $("#update_customer_service").val(service);
-                        $("#update_customer_text1").val(text1);
-                        $("#update_customer_text2").val(text2);
-                        $("#update_customer_text3").val(text3);
-                        $("#update_customer_text4").append('<option selected>' + text4 + '</option>');
-                        $("#update_customer").modal("show");
-                    }
-
-                    function delete_customer(id) {
-                        $("#delete_btn").attr("href", "https://www.tndigitalseva.in/customers/delete_customer_report/" + id)
-                        $("#delete_customer").modal("show");
-
-                    }
-
-                    function selectfile() {
-                        $("#ref_3").click();
-                    }
-
-                    function updateselectfile() {
-                        $("#update_customer_file").click();
-                    }
-                    $('#ref_3').on('change', function() {
-                        $("#ref_3_error").text("");
-                        const size = (this.files[0].size / 1024 / 1024).toFixed(2);
-
-                        if (size > 0.5) {
-                            $("#ref_3_error").text("File must be less than 500 KB");
-                            $(this).val("");
-                        } else {
-                            var fileExtension = ['jpeg', 'jpg', 'png', 'pdf', 'doc', 'docx', 'xls', 'xlsx', 'csv'];
-                            if ($.inArray($(this).val().split('.').pop().toLowerCase(), fileExtension) == -1) {
-                                $("#ref_3_error").text("Only formats are allowed : " + fileExtension.join(', '));
-                                $(this).val("");
-                            }
-                        }
-                    });
-                    $('#update_customer_file').on('change', function() {
-                        $("#update_customer_file_error").text("");
-                        const size = (this.files[0].size / 1024 / 1024).toFixed(2);
-
-                        if (size > 0.5) {
-                            $("#update_customer_file_error").text("File must be less than 500 KB");
-                            $(this).val("");
-                        } else {
-                            var fileExtension = ['jpeg', 'jpg', 'png', 'pdf', 'doc', 'docx', 'xls', 'xlsx', 'csv'];
-                            if ($.inArray($(this).val().split('.').pop().toLowerCase(), fileExtension) == -1) {
-                                $("#update_customer_file_error").text("Only formats are allowed : " + fileExtension.join(', '));
-                                $(this).val("");
-                            }
-                        }
-                    });
-                    $("#print_btn").click(function() {
-                        var divToPrint = document.getElementById('receipt_area');
-                        var htmlToPrint = divToPrint.outerHTML;
-                        newWin = window.open("");
-                        newWin.document.write(htmlToPrint);
-                        newWin.print();
-                        newWin.close();
-                    });
-                </script>
-                <div id="pdf_editor"></div>
-                <div class="modal fade" id="confirm-delete-js" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                    <div class="modal-dialog modal-confirm modal-sm">
-                        <div class="modal-content">
-                            <div class="modal-header modal-header-danger">
-                                <h4 id="exampleModalLabel" class="modal-title">Are you sure?</h4>
-                                <button type="button" data-dismiss="modal" aria-label="Close" class="close"><i class="ni ni-fat-remove"></i></button>
-                            </div>
-
-                            <div class="modal-body">
-                                <p>Do you really want to delete? This process cannot be undone.</p>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-                                <button class="btn btn-danger btn-ok btn-ok-js">Delete</button>
-                            </div>
-                        </div>
-                    </div>
+                <div data-modal-target="authentication-modal" data-modal-toggle="authentication-modal" class="w-full md:w-auto flex flex-col md:flex-row space-y-2 md:space-y-0 items-stretch md:items-center justify-end md:space-x-3 flex-shrink-0">
+                    <button type="button" id="createProductButton" class="flex items-center justify-center text-white bg-teal-700 hover:bg-teal-800 focus:ring-4 focus:ring-teal-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-teal-600 dark:hover:bg-teal-700 focus:outline-none dark:focus:ring-teal-800">
+                        <svg class="h-3.5 w-3.5 mr-1.5 -ml-1" fill="currentColor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                            <path clip-rule="evenodd" fill-rule="evenodd" d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z" />
+                        </svg>
+                        Add New Customer
+                    </button>
                 </div>
-                <div class="modal fade" id="confirm-delete-multi-js" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                    <div class="modal-dialog modal-confirm modal-sm">
-                        <div class="modal-content">
-                            <div class="modal-header modal-header-danger">
-                                <h4 id="exampleModalLabel" class="modal-title">Are you sure?</h4>
-                                <button type="button" data-dismiss="modal" aria-label="Close" class="close"><i class="ni ni-fat-remove"></i></button>
-                            </div>
-
-                            <div class="modal-body">
-                                <p>Do you really want to delete? This process cannot be undone.</p>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-                                <button class="btn btn-danger btn-ok btn-ok-multi-js">Delete</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="modal fade" id="confirm-customer-delete-js" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                    <div class="modal-dialog modal-confirm modal-sm">
-                        <div class="modal-content">
-                            <div class="modal-header modal-header-danger">
-                                <h4 id="exampleModalLabel" class="modal-title">Are you sure?</h4>
-                                <button type="button" data-dismiss="modal" aria-label="Close" class="close"><i class="ni ni-fat-remove"></i></button>
-                            </div>
-
-                            <div class="modal-body">
-                                <p>Do you really want to delete? This process cannot be undone.</p>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-                                <button class="btn btn-danger btn-ok btn-ok-customer-js">Delete</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="modal fade" id="confirm-delete-gst-purchase" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                    <div class="modal-dialog modal-confirm modal-sm">
-                        <div class="modal-content">
-                            <div class="modal-header modal-header-danger">
-                                <h4 id="exampleModalLabel" class="modal-title">Are you sure?</h4>
-                                <button type="button" data-dismiss="modal" aria-label="Close" class="close"><i class="ni ni-fat-remove"></i></button>
-                            </div>
-
-                            <div class="modal-body">
-                                <p>Do you really want to delete? This process cannot be undone.</p>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-                                <button class="btn btn-danger btn-ok btn-ok-gst-purchase">Delete</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="modal fade" id="confirm-delete-gst-sales" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                    <div class="modal-dialog modal-confirm modal-sm">
-                        <div class="modal-content">
-                            <div class="modal-header modal-header-danger">
-                                <h4 id="exampleModalLabel" class="modal-title">Are you sure?</h4>
-                                <button type="button" data-dismiss="modal" aria-label="Close" class="close"><i class="ni ni-fat-remove"></i></button>
-                            </div>
-
-                            <div class="modal-body">
-                                <p>Do you really want to delete? This process cannot be undone.</p>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-                                <button class="btn btn-danger btn-ok btn-ok-gst-sales">Delete</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="modal fade" id="confirm-delete" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                    <div class="modal-dialog modal-confirm modal-sm">
-                        <div class="modal-content">
-                            <div class="modal-header modal-header-danger">
-                                <h4 id="exampleModalLabel" class="modal-title">Are you sure?</h4>
-                                <button type="button" data-dismiss="modal" aria-label="Close" class="close"><i class="ni ni-fat-remove"></i></button>
-                            </div>
-
-                            <div class="modal-body">
-                                <p>Do you really want to delete? This process cannot be undone.</p>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-                                <a href="#" class="btn btn-danger btn-ok">Delete</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="modal fade" id="confirm-activate" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                    <div class="modal-dialog modal-confirm modal-sm">
-                        <div class="modal-content">
-                            <div class="modal-header modal-header-success">
-                                <h4 id="exampleModalLabel" class="modal-title">Are you sure?</h4>
-                                <button type="button" data-dismiss="modal" aria-label="Close" class="close"><i class="ni ni-fat-remove"></i></button>
-                            </div>
-
-                            <div class="modal-body">
-                                <p>Do you really want to Activate?</p>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-                                <a href="#" class="btn btn-success btn-ok">Activate</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="modal fade" id="confirm-de-activate" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                    <div class="modal-dialog modal-confirm modal-sm">
-                        <div class="modal-content">
-                            <div class="modal-header modal-header-danger">
-                                <h4 id="exampleModalLabel" class="modal-title">Are you sure?</h4>
-                                <button type="button" data-dismiss="modal" aria-label="Close" class="close"><i class="ni ni-fat-remove"></i></button>
-                            </div>
-
-                            <div class="modal-body">
-                                <p>Do you really want to De Activate?</p>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-                                <a href="#" class="btn btn-danger btn-ok">De Activate</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="modal fade" id="error_modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                    <div class="modal-dialog modal-confirm modal-sm">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h4 id="exampleModalLabel" class="modal-title">Error</h4>
-                                <button type="button" data-dismiss="modal" aria-label="Close" class="close"><i class="ni ni-fat-remove"></i></button>
-                            </div>
-
-                            <div class="modal-body">
-                                <h3>
-                                    <p id="error_modal_text" style="color:red;"></p>
-                                </h3>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-danger" data-dismiss="modal">ok</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="modal fade" id="confirm-accept-wallet" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                    <div class="modal-dialog modal-confirm modal-sm">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h4 id="exampleModalLabel" class="modal-title">Are you sure?</h4>
-                                <button type="button" data-dismiss="modal" aria-label="Close" class="close"><i class="ni ni-fat-remove"></i></button>
-                            </div>
-
-                            <div class="modal-body">
-                                <p>Do you really want to Accept Wallet Request?</p>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-                                <a href="#" class="btn btn-success btn-ok" onclick="confirm_accept_wallet(this)">Accept</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="modal fade" id="confirm-reject-wallet" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                    <div class="modal-dialog modal-confirm modal-sm">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h4 id="exampleModalLabel" class="modal-title">Are you sure?</h4>
-                                <button type="button" data-dismiss="modal" aria-label="Close" class="close"><i class="ni ni-fat-remove"></i></button>
-                            </div>
-
-                            <div class="modal-body">
-                                <p>Do you really want to Reject Wallet Request?</p>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-                                <a href="#" class="btn btn-danger btn-ok">Reject</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="modal fade" id="low_balance_modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                    <div class="modal-dialog modal-confirm modal-sm">
-                        <div class="modal-content">
-                            <div class="modal-header  modal-header-danger">
-                                <h4 id="exampleModalLabel" class="modal-title">Low Balace</h4>
-                                <button type="button" data-dismiss="modal" aria-label="Close" class="close"><i class="ni ni-fat-remove"></i></button>
-                            </div>
-
-                            <div class="modal-body">
-                                <p>Unable to process. Due to low balance!</p>
-                            </div>
-                            <div class="modal-footer">
-                                <!--                <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-                                <a href="#" class="btn btn-danger btn-ok">Reject</a>-->
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="modal fade" id="receipt_amoun_modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                    <div class="modal-dialog modal-confirm modal-sm">
-                        <form id="receipt_amoun_form" action="" method="post">
-                            <div class="modal-content">
-                                <div class="modal-header  modal-header-primary">
-                                    <h4 id="exampleModalLabel" class="modal-title">Amount</h4>
-                                    <button type="button" data-dismiss="modal" aria-label="Close" class="close"><i class="ni ni-fat-remove"></i></button>
+            </div>
+            <div class="overflow-x-auto">
+                <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+                    <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+                        <tr>
+                            <!-- <th scope="col" class="p-4">
+                                <div class="flex items-center">
+                                    <input id="checkbox-all" type="checkbox" class="w-4 h-4 text-teal-600 bg-gray-100 rounded border-gray-300 focus:ring-teal-500 dark:focus:ring-teal-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                                    <label for="checkbox-all" class="sr-only">checkbox</label>
                                 </div>
-
-                                <div class="modal-body">
-                                    <div class="form-group">
-                                        <input type="number" name="receipt_amount" id="receipt_amount" class="form-control" placeholder="Amount">
-                                        <span class="badge badge-danger" id="receipt_amount_alert" style="display:none;">Required</span>
-                                    </div>
+                            </th> -->
+                            <th scope="col" class="p-4">Customer Name</th>
+                            <th scope="col" class="p-4">Mobile</th>
+                            <th scope="col" class="p-4">D.O.B</th>
+                            <th scope="col" class="p-4">Address</th>
+                            <th scope="col" class="p-4">Add New Service</th>
+                            <th scope="col" class="p-4">Last Update</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="border-b dark:border-gray-600 hover:bg-gray-100 dark:hover:bg-gray-700">
+                            <!-- <td class="p-4 w-4">
+                                <div class="flex items-center">
+                                    <input id="checkbox-table-search-1" type="checkbox" onclick="event.stopPropagation()" class="w-4 h-4 text-teal-600 bg-gray-100 rounded border-gray-300 focus:ring-teal-500 dark:focus:ring-teal-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                                    <label for="checkbox-table-search-1" class="sr-only">checkbox</label>
                                 </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-                                    <input type="submit" class="btn btn-success" value="Submit" onclick="process_receipt();">
+                            </td> -->
+                            <th scope="row" class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                <div class="flex items-center mr-3">
+                                    <img src="https://www.transparentpng.com/thumb/user/gray-user-profile-icon-png-fP8Q1P.png" alt="iMac Front Image" class="h-8 w-auto mr-3">
+                                    Prasanth S
                                 </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-                <div class="modal fade" id="processing" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                    <div class="modal-dialog modal-confirm modal-sm">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h4 id="exampleModalLabel" class="modal-title">Processing...</h4>
-                                <button type="button" data-dismiss="modal" aria-label="Close" class="close"><i class="ni ni-fat-remove"></i></button>
-                            </div>
-
-                            <div class="modal-body">
-                                <center>
-                                    <img src="https://www.tndigitalseva.in/assets/images/uploading.gif" width="100%">
-                                    <br>
-                                    <p>Processing data Please wait...</p>
-                                </center>
-
-                            </div>
-                            <div class="modal-footer">
-                                <!--                <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-                                <button class="btn btn-danger btn-ok btn-ok-js">Delete</button>-->
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Footer -->
-                <footer class="footer">
-                    <div class="row align-items-center justify-content-xl-between">
-                        <div class="col-xl-2"></div>
-                        <div class="col-xl-8">
-                            <div class="copyright text-center text-xl-left text-muted">
-                                <!--                <center>  &copy; 2018 <a href="https://www.tndigitalseva.in/" class="font-weight-bold ml-1" target="_blank">TN Digital Seva Pvt Ltd. All rights reserved</a></center>-->
-                            </div>
-                        </div>
-                        <div class="col-xl-2">
-                            <ul class="nav nav-footer justify-content-center justify-content-xl-end">
-                                <li class="nav-item">
-                                    <a href="https://www.vigous.in/" class="nav-link" target="_blank">.</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </footer>
+                            </th>
+                            <td class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                <div class="flex items-center">
+                                    <div class="h-4 w-4 rounded-full inline-block mr-2 bg-red-700"></div>
+                                    9880397506
+                                </div>
+                            </td>
+                            <td class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap dark:text-white">11/11/1999</td>
+                            <td class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap dark:text-white">sivagiri</td>
+                            <!-- <td class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                <div class="flex items-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" fill="currentColor" class="w-5 h-5 text-gray-400 mr-2" aria-hidden="true">
+                                        <path d="M2.25 2.25a.75.75 0 000 1.5h1.386c.17 0 .318.114.362.278l2.558 9.592a3.752 3.752 0 00-2.806 3.63c0 .414.336.75.75.75h15.75a.75.75 0 000-1.5H5.378A2.25 2.25 0 017.5 15h11.218a.75.75 0 00.674-.421 60.358 60.358 0 002.96-7.228.75.75 0 00-.525-.965A60.864 60.864 0 005.68 4.509l-.232-.867A1.875 1.875 0 003.636 2.25H2.25zM3.75 20.25a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0zM16.5 20.25a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0z" />
+                                    </svg>
+                                    1.6M
+                                </div>
+                            </td> -->
+                            <td class="px-4 py-3">
+                                <button type="button" data-drawer-target="drawer-update-product" data-drawer-show="drawer-update-product" aria-controls="drawer-update-product" class="py-2 px-3 flex items-center text-sm font-medium text-center text-white bg-teal-700 rounded-lg hover:bg-teal-800 focus:ring-4 focus:outline-none focus:ring-teal-300 dark:bg-teal-600 dark:hover:bg-teal-700 dark:focus:ring-teal-800">
+                                    <svg class="h-3.5 w-3.5 mr-1.5 -ml-1" fill="currentColor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                        <path clip-rule="evenodd" fill-rule="evenodd" d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z" />
+                                    </svg>
+                                    Add Service
+                                </button>
+                            </td>
+                            <td class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                <div class="flex items-center space-x-4">
+                                    <button type="button" data-drawer-target="drawer-update-product" data-drawer-show="drawer-update-product" aria-controls="drawer-update-product" class="py-2 px-3 flex items-center text-sm font-medium text-center text-white bg-teal-700 rounded-lg hover:bg-teal-800 focus:ring-4 focus:outline-none focus:ring-teal-300 dark:bg-teal-600 dark:hover:bg-teal-700 dark:focus:ring-teal-800">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-2 -ml-0.5" viewbox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                            <path d="M17.414 2.586a2 2 0 00-2.828 0L7 10.172V13h2.828l7.586-7.586a2 2 0 000-2.828z" />
+                                            <path fill-rule="evenodd" d="M2 6a2 2 0 012-2h4a1 1 0 010 2H4v10h10v-4a1 1 0 112 0v4a2 2 0 01-2 2H4a2 2 0 01-2-2V6z" clip-rule="evenodd" />
+                                        </svg>
+                                        Edit
+                                    </button>
+                                    <!-- <button type="button" data-drawer-target="drawer-read-product-advanced" data-drawer-show="drawer-read-product-advanced" aria-controls="drawer-read-product-advanced" class="py-2 px-3 flex items-center text-sm font-medium text-center text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-teal-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" fill="currentColor" class="w-4 h-4 mr-2 -ml-0.5">
+                                            <path d="M12 15a3 3 0 100-6 3 3 0 000 6z" />
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M1.323 11.447C2.811 6.976 7.028 3.75 12.001 3.75c4.97 0 9.185 3.223 10.675 7.69.12.362.12.752 0 1.113-1.487 4.471-5.705 7.697-10.677 7.697-4.97 0-9.186-3.223-10.675-7.69a1.762 1.762 0 010-1.113zM17.25 12a5.25 5.25 0 11-10.5 0 5.25 5.25 0 0110.5 0z" />
+                                        </svg>
+                                        Preview
+                                    </button> -->
+                                    <button type="button" data-modal-target="delete-modal" data-modal-toggle="delete-modal" class="flex items-center text-red-700 hover:text-white border border-red-700 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm px-3 py-2 text-center dark:border-red-500 dark:text-red-500 dark:hover:text-white dark:hover:bg-red-600 dark:focus:ring-red-900">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-2 -ml-0.5" viewbox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                            <path fill-rule="evenodd" d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v6a1 1 0 102 0V8a1 1 0 00-1-1z" clip-rule="evenodd" />
+                                        </svg>
+                                        Delete
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
-        <!-- Argon Scripts -->
-        <!-- Core -->
-        <script src="https://www.tndigitalseva.in/assets/panel/vendor/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
-
-        <script src="https://www.tndigitalseva.in/assets/panel/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-        <!-- Optional JS -->
-        <script src="https://www.tndigitalseva.in/assets/panel/vendor/chart.js/dist/Chart.min.js"></script>
-        <script src="https://www.tndigitalseva.in/assets/panel/vendor/chart.js/dist/Chart.extension.js"></script>
-        <!-- Argon JS -->
-        <script src="https://www.tndigitalseva.in/assets/panel/js/argon.js?v=1.0.0"></script>
-        <!--TOAST-->
-        <link href="https://www.tndigitalseva.in/assets/panel/css/toast.style.min.css" rel="stylesheet">
-        <script src="https://www.tndigitalseva.in/assets/panel/js/toast.script.js"></script>
-        <script src="https://www.tndigitalseva.in/assets/panel/js/jquery.tabletoCSV.js"></script>
-        <script>
-            function addToast(toast_message) {
-                $.Toast("", toast_message, "success", {
-                    has_icon: true,
-                    has_close_btn: true,
-                    stack: true,
-                    fullscreen: false,
-                    timeout: 8000,
-                    sticky: false,
-                    has_progress: true,
-                    rtl: false,
-                });
-                $(".toast-item-wrapper").slideDown("slow");
-            }
-
-
-            function processing_form() {
-                $('#processing').modal('show');
-            }
-            $(document).ready(function() {
-                $('.datepicker').on('changeDate', function(ev) {
-                    $(this).datepicker('hide');
-                });
-            });
-
-            $.ajax({
-                url: "https://www.tndigitalseva.in/users/get_notifications/",
-                type: "GET",
-                dataType: "JSON",
-                success: function(data) {
-
-                    var notifications = data.length;
-
-                    $(".notification-data").html("");
-                    var count = 0;
-                    for (var i = 0; i < notifications; i++) {
-                        var profile = "https://www.tndigitalseva.in/" + data[i].profile_image;
-                        var name_color = "";
-                        // if (data[i].status == 0) {
-                        //     name_color="text-white"
-                        // }
-                        var notification_markup = '<div class="row align-items-center">' +
-                            '<div class="col-auto">' +
-                            '<img alt="Image placeholder" src="' + profile + '" class="avatar rounded-circle">' +
-                            '</div>' +
-                            '<div class="col ml--2">' +
-                            '<div class="d-flex justify-content-between align-items-center">' +
-                            '<div>' +
-                            '<h4 class="mb-0 text-sm ' + name_color + '">' + data[i].notifier_name + '</h4>' +
-                            '</div>' +
-                            '<div class="text-right text-muted">'
-                            //+'<small>2 hrs ago</small>'
-                            +
-                            '</div>' +
-                            '</div>' +
-                            '<p class="text-sm mb-0">' + data[i].description + '</p>' +
-                            '</div>' +
-                            '</div>';
-                        // if (data[i].status == 0) {
-                        // 	     $(".notification-data").append('<a class="list-group-item list-group-item-action bg-primary text-white" href="#">' + notification_markup + '</a>');
-                        //     count++;
-                        // }
-                        // else{
-                        $(".notification-data").append('<a class="list-group-item list-group-item-action" href="#">' + notification_markup + '</a>');
-                        //}
-                    }
-                    if (count > 0) {
-                        addToast(count + " new notifications");
-                    }
-                    $(".notification-data-count").text(count);
-                    console.log("data ", data);
-                },
-                error: function(jqXHR, textStatus, errorThrown) {
-                    console.log("Error get data from ajax");
-                }
-            });
-            $.ajax({
-                url: "https://www.tndigitalseva.in/recharge/check_status/",
-                type: "GET",
-                dataType: "JSON",
-                success: function(data) {
-                    console.log("data ", data);
-                },
-                error: function(jqXHR, textStatus, errorThrown) {
-                    console.log("Error get data from ajax");
-                }
-            });
-
-            function update_notifications() {
-
-                $.ajax({
-                    url: "https://www.tndigitalseva.in/users/update_notifications/",
-                    type: "GET",
-                    dataType: "JSON",
-                    success: function(data) {
-                        console.log("data ", data);
-                        $.ajax({
-                            url: "https://www.tndigitalseva.in/users/get_notifications/",
-                            type: "GET",
-                            dataType: "JSON",
-                            success: function(data) {
-                                var notifications = data.length;
-
-                                //$(".notification-data").html("");
-                                var count = 0;
-                                for (var i = 0; i < notifications; i++) {
-                                    // $(".notification-data").append('<a class="dropdown-item" href="#">' + data[i].description + '</a><div class="dropdown-divider"></div>');
-                                    if (data[i].status == 0) {
-                                        count++;
-                                    }
-                                }
-                                $(".notification-data-count").text(count);
-                                console.log("data ", data);
-                            },
-                            error: function(jqXHR, textStatus, errorThrown) {
-                                console.log("Error get data from ajax");
-                            }
-                        });
-                    },
-                    error: function(jqXHR, textStatus, errorThrown) {
-                        console.log("Error get data from ajax");
-                    }
-                });
-            }
-            $('#confirm-delete').on('show.bs.modal', function(e) {
-                $(this).find('.btn-ok').attr('href', $(e.relatedTarget).data('href'));
-            });
-
-            $('#confirm-delete-js').on('show.bs.modal', function(e) {
-                $(this).find('.btn-ok-js').attr('value', $(e.relatedTarget).data('href'));
-            });
-            $('#confirm-delete-multi-js').on('show.bs.modal', function(e) {
-                $(this).find('.btn-ok-multi-js').attr('value', $(e.relatedTarget).data('href'));
-            });
-            $('#confirm-customer-delete-js').on('show.bs.modal', function(e) {
-                $(this).find('.btn-ok-customer-js').attr('value', $(e.relatedTarget).data('href'));
-            });
-            $('#confirm-delete-gst-purchase').on('show.bs.modal', function(e) {
-                $(this).find('.btn-ok-gst-purchase').attr('value', $(e.relatedTarget).data('href'));
-            });
-            $('#confirm-delete-gst-sales').on('show.bs.modal', function(e) {
-                $(this).find('.btn-ok-gst-sales').attr('value', $(e.relatedTarget).data('href'));
-            });
-
-            $('#confirm-activate').on('show.bs.modal', function(e) {
-                $(this).find('.btn-ok').attr('href', $(e.relatedTarget).data('href'));
-            });
-            $('#confirm-de-activate').on('show.bs.modal', function(e) {
-                $(this).find('.btn-ok').attr('href', $(e.relatedTarget).data('href'));
-            });
-            $('.btn-ok-js').on('click', function(e) {
-
-                delete_sub_service($(this).val());
-            });
-            $('.btn-ok-multi-js').on('click', function(e) {
-                delete_multi_service($(this).val());
-            });
-            $('.btn-ok-customer-js').on('click', function(e) {
-
-                delete_customer_data($(this).val());
-            });
-            $('.btn-ok-gst-purchase').on('click', function(e) {
-                delete_gst_purchase($(this).val());
-
-            });
-            $('.btn-ok-gst-sales').on('click', function(e) {
-
-                delete_gst_sales($(this).val());
-            });
-            $('#confirm-accept-wallet').on('show.bs.modal', function(e) {
-                $(this).find('.btn-ok').attr('href', $(e.relatedTarget).data('href'));
-            });
-            $('#confirm-reject-wallet').on('show.bs.modal', function(e) {
-                $(this).find('.btn-ok').attr('href', $(e.relatedTarget).data('href'));
-            });
-
-            function receipt(url, amount) {
-                $("#receipt_amount").val(amount);
-                document.getElementById("receipt_amoun_form").action = url;
-                $('#receipt_amoun_modal').modal('show');
-            }
-
-            function process_receipt() {
-                if ($("#receipt_amount").val() != "") {
-                    $('#processing').modal('show');
-                    $('#receipt_amoun_form').submit();
-                } else {
-                    $("#receipt_amount").focus();
-                    $("#receipt_amount_alert").css("display", "block");
-                }
-                event.preventDefault();
-            }
-
-            function low_balance() {
-                $('#low_balance_modal').modal('show');
-            }
-
-            function confirm_accept_wallet(data) {
-                $("#confirm-accept-wallet").modal("hide");
-                $("#processing").modal("show");
-            }
-
-            function exportTableToExcel(tableID, filename = '') {
-                $("#" + tableID).tableToCSV();
-                /** var downloadLink;
-                 var dataType = 'application/vnd.ms-excel';
-                 var tableSelect = document.getElementById(tableID);
-                 var tableHTML = tableSelect.outerHTML.replace(/ /g, '%20');
-                 // Specify file name
-                 filename = filename?filename+'.xls':'excel_data.xls';
-                 
-                 // Create download link element
-                 downloadLink = document.createElement("a");
-                 
-                 document.body.appendChild(downloadLink);
-                 
-                 if(navigator.msSaveOrOpenBlob){
-                 var blob = new Blob(['\ufeff', tableHTML], {
-                 type: dataType
-                 });
-                 navigator.msSaveOrOpenBlob( blob, filename);
-                 }else{
-                 // Create a link to the file
-                 downloadLink.href = 'data:' + dataType + ', ' + tableHTML;
-                 
-                 // Setting the file name
-                 downloadLink.download = filename;
-                 
-                 //triggering the function
-                 downloadLink.click();
-                 }*/
-            }
-
-            function exportTableToPdf(table_id, file_name) {
-                var divToPrint = document.getElementById(table_id);
-                newWin = window.open("");
-                newWin.document.write(divToPrint.outerHTML);
-                newWin.print();
-                newWin.close();
-            }
-            //                        setInterval(function () {
-            //                            $.ajax({
-            //                                url: "https://www.tndigitalseva.in/users/get_notifications/",
-            //                                type: "GET",
-            //                                dataType: "JSON",
-            //                                success: function (data)
-            //                                {
-            //                                    var notifications = data.length;
-            //                                    $(".notification-data").html("");
-            //                                    var count = 0;
-            //                                    for (var i = 0; i < notifications; i++) {
-            //                                        if (data[i].status == 0) {
-            //                                            $(".notification-data").append('<a class="dropdown-item bg-primary" href="#">' + data[i].description + '</a><div class="dropdown-divider"></div>');
-            //                                            count++;
-            //                                        } else {
-            //                                            $(".notification-data").append('<a class="dropdown-item" href="#">' + data[i].description + '</a><div class="dropdown-divider"></div>');
-            //                                        }
-            //                                    }
-            //                                    if (count > 0) {
-            //                                        addToast(count + " new notifications");
-            //                                    }
-            //                                    $(".notification-data-count").text(count);
-            //                                    console.log("data ", data);
-            //                                },
-            //                                error: function (jqXHR, textStatus, errorThrown)
-            //                                {
-            //                                    console.log("Error get data from ajax");
-            //                                }
-            //                            });
-            //                            $.ajax({
-            //                                url: "https://www.tndigitalseva.in/recharge/check_status/",
-            //                                type: "GET",
-            //                                dataType: "JSON",
-            //                                success: function (data)
-            //                                {
-            //                                    console.log("data ", data);
-            //                                },
-            //                                error: function (jqXHR, textStatus, errorThrown)
-            //                                {
-            //                                    console.log("Error get data from ajax");
-            //                                }
-            //                            });
-            //                        }, 1000 * 60 * 1);
-            function change_per_page() {
-
-                window.location.href = currentUrl + "/0/" + $("#page_limit option:selected").val();
-            }
-
-            function reject_wallet(id) {
-                $("#input-reject-wrid").val(id);
-                $("#reject_wallet_request").modal('show');
-            }
-
-            function reject_processing() {
-                $('#processing').modal('show');
-                $('#reject_wallet_request_form').submit();
-                event.preventDefault();
-            }
-
-            function view_request(id, amount, uid) {
-
-                $("#view_wallet_request").modal('show');
-                $.ajax({
-                    url: "https://www.tndigitalseva.in/ledger/get_wallet/" + id,
-                    type: "GET",
-                    dataType: "JSON",
-                    success: function(data) {
-                        $("#wallet_balance_amount").text(data.wallet_balance);
-
-                        $("#request_amount").text(data.payment_amount);
-                        $("#paid_bank").text(data.bank);
-                        $("#wallet_transaction_id").text(data.transaction_id);
-                        $("#pay_type").text(data.payment_type);
-                        $("#pay_proof").attr("href", "https://www.tndigitalseva.in/" + data.proof);
-
-                    },
-                    error: function(jqXHR, textStatus, errorThrown) {
-                        alert('Error get data from ajax');
-                    }
-                });
-            }
-            $(document).ready(function() {
-                $('#aadhaarno').on('keyup', function() {
-                    if ($("#aadhaarno").val().length == 12) {
-                        //   $('#name_pan').focus();
-                        $("#aadhar_no_msg").text("");
-                        // document.getElementById("nextBtn").style.display = "inline";
-                    } else {
-                        $("#aadhar_no_msg").text("12 digit");
-                        //     document.getElementById("nextBtn").style.display = "none";
-                    }
-                });
-                $('#mobile').on('keyup', function() {
-                    if ($("#mobile").val().length == 10) {
-                        //      $('#email').focus();
-                        $("#mobile_msg").text("");
-                        //   document.getElementById("nextBtn").style.display = "inline";
-                    } else {
-                        $("#mobile_msg").text("10 digit");
-                        //     document.getElementById("nextBtn").style.display = "none";
-                    }
-                });
-                $('#dob').on('keyup', function() {
-                    if ($("#dob").val().length == 10) {
-                        //   $('#male').focus();
-                        $("#dob_msg").text("");
-                        //  document.getElementById("nextBtn").style.display = "inline";
-                    } else {
-                        $("#dob_msg").text("10 digit");
-                        //  document.getElementById("nextBtn").style.display = "none";
-                    }
-                });
-                $('#panno').on('keyup', function() {
-                    if ($("#panno").val().length == 10) {
-                        //   $('#male').focus();
-                        $("#panno_msg").text("");
-                        // document.getElementById("nextBtn").style.display = "inline";
-                    } else {
-                        $("#panno_msg").text("10 digit");
-                        //  document.getElementById("nextBtn").style.display = "none";
-                    }
-                });
-                $('#ao_code').on('keyup', function() {
-                    if ($("#ao_code").val().length == 12) {
-                        //$('#proof_of_address').focus();
-                        $("#ao_code_msg").text("");
-                        //  document.getElementById("nextBtn").style.display = "inline";
-                    } else {
-                        $("#ao_code_msg").text("12 Character");
-                        //   document.getElementById("nextBtn").style.display = "none";
-                    }
-                });
-
-            });
-        </script>
-</body>
-
-</html>
+    </div>
+</section>
+<!-- End block -->
+<div id="createProductModal" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] md:h-full">
+    <div class="relative p-4 w-full max-w-3xl h-full md:h-auto">
+        <!-- Modal content -->
+        <div class="relative p-4 bg-white rounded-lg shadow dark:bg-gray-800 sm:p-5">
+            <!-- Modal header -->
+            <div class="flex justify-between items-center pb-4 mb-4 rounded-t border-b sm:mb-5 dark:border-gray-600">
+                <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Add Product</h3>
+                <button type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-600 dark:hover:text-white" data-modal-toggle="createProductModal">
+                    <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd" />
+                    </svg>
+                    <span class="sr-only">Close modal</span>
+                </button>
+            </div>
+            <!-- Modal body -->
+            <form action="#">
+                <div class="grid gap-4 mb-4 sm:grid-cols-2">
+                    <div>
+                        <label for="name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Product Name</label>
+                        <input type="text" name="name" id="name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-teal-600 focus:border-teal-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-teal-500 dark:focus:border-teal-500" placeholder="Type product name" required="">
+                    </div>
+                    <div><label for="category" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Category</label><select id="category" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-teal-500 focus:border-teal-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-teal-500 dark:focus:border-teal-500">
+                            <option selected="">Select category</option>
+                            <option value="TV">TV/Monitors</option>
+                            <option value="PC">PC</option>
+                            <option value="GA">Gaming/Console</option>
+                            <option value="PH">Phones</option>
+                        </select></div>
+                    <div>
+                        <label for="brand" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Brand</label>
+                        <input type="text" name="brand" id="brand" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-teal-600 focus:border-teal-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-teal-500 dark:focus:border-teal-500" placeholder="Product brand" required="">
+                    </div>
+                    <div>
+                        <label for="price" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Price</label>
+                        <input type="number" name="price" id="price" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-teal-600 focus:border-teal-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-teal-500 dark:focus:border-teal-500" placeholder="$2999" required="">
+                    </div>
+                    <div class="grid gap-4 sm:col-span-2 md:gap-6 sm:grid-cols-4">
+                        <div>
+                            <label for="weight" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Item weight (kg)</label>
+                            <input type="number" name="weight" id="weight" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-teal-600 focus:border-teal-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-teal-500 dark:focus:border-teal-500" placeholder="12" required="">
+                        </div>
+                        <div>
+                            <label for="length" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Lenght (cm)</label>
+                            <input type="number" name="length" id="length" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-teal-600 focus:border-teal-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-teal-500 dark:focus:border-teal-500" placeholder="105" required="">
+                        </div>
+                        <div>
+                            <label for="breadth" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Breadth (cm)</label>
+                            <input type="number" name="breadth" id="breadth" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-teal-600 focus:border-teal-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-teal-500 dark:focus:border-teal-500" placeholder="15" required="">
+                        </div>
+                        <div>
+                            <label for="width" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Width (cm)</label>
+                            <input type="number" name="width" id="width" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-teal-600 focus:border-teal-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-teal-500 dark:focus:border-teal-500" placeholder="23" required="">
+                        </div>
+                    </div>
+                    <div class="sm:col-span-2"><label for="description" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Description</label><textarea id="description" rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-teal-500 focus:border-teal-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-teal-500 dark:focus:border-teal-500" placeholder="Write product description here"></textarea></div>
+                </div>
+                <div class="mb-4 space-y-4 sm:flex sm:space-y-0">
+                    <div class="flex items-center mr-4">
+                        <input id="inline-checkbox" type="checkbox" value="" name="sellingType" class="w-4 h-4 bg-gray-100 rounded border-gray-300 text-teal-600 focus:ring-teal-500 dark:focus:ring-teal-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                        <label for="inline-checkbox" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">In-store only</label>
+                    </div>
+                    <div class="flex items-center mr-4">
+                        <input id="inline-2-checkbox" type="checkbox" value="" name="sellingType" class="w-4 h-4 bg-gray-100 rounded border-gray-300 text-teal-600 focus:ring-teal-500 dark:focus:ring-teal-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                        <label for="inline-2-checkbox" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Online selling only</label>
+                    </div>
+                    <div class="flex items-center mr-4">
+                        <input checked="" id="inline-checked-checkbox" type="checkbox" value="" name="sellingType" class="w-4 h-4 bg-gray-100 rounded border-gray-300 text-teal-600 focus:ring-teal-500 dark:focus:ring-teal-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                        <label for="inline-checked-checkbox" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Both in-store and online</label>
+                    </div>
+                </div>
+                <div class="mb-4">
+                    <span class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Product Images</span>
+                    <div class="flex justify-center items-center w-full">
+                        <label for="dropzone-file" class="flex flex-col justify-center items-center w-full h-64 bg-gray-50 rounded-lg border-2 border-gray-300 border-dashed cursor-pointer dark:hover:bg-bray-800 dark:bg-gray-700 hover:bg-gray-100 dark:border-gray-600 dark:hover:border-gray-500 dark:hover:bg-gray-600">
+                            <div class="flex flex-col justify-center items-center pt-5 pb-6">
+                                <svg aria-hidden="true" class="mb-3 w-10 h-10 text-gray-400" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" />
+                                </svg>
+                                <p class="mb-2 text-sm text-gray-500 dark:text-gray-400">
+                                    <span class="font-semibold">Click to upload</span>
+                                    or drag and drop
+                                </p>
+                                <p class="text-xs text-gray-500 dark:text-gray-400">SVG, PNG, JPG or GIF (MAX. 800x400px)</p>
+                            </div>
+                            <input id="dropzone-file" type="file" class="hidden">
+                        </label>
+                    </div>
+                </div>
+                <div class="items-center space-y-4 sm:flex sm:space-y-0 sm:space-x-4">
+                    <button type="submit" class="w-full sm:w-auto justify-center text-white inline-flex bg-teal-700 hover:bg-teal-800 focus:ring-4 focus:outline-none focus:ring-teal-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-teal-600 dark:hover:bg-teal-700 dark:focus:ring-teal-800">Add product</button>
+                    <button class="w-full sm:w-auto text-white justify-center inline-flex items-center bg-teal-700 hover:bg-teal-800 focus:ring-4 focus:outline-none focus:ring-teal-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-teal-600 dark:hover:bg-teal-700 dark:focus:ring-teal-800">
+                        <svg class="mr-1 -ml-1 w-5 h-5" fill="currentColor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd" />
+                        </svg>
+                        Schedule
+                    </button>
+                    <button data-modal-toggle="createProductModal" type="button" class="w-full justify-center sm:w-auto text-gray-500 inline-flex items-center bg-white hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-teal-300 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10 dark:bg-gray-700 dark:text-gray-300 dark:border-gray-500 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-600">
+                        <svg class="mr-1 -ml-1 w-5 h-5" fill="currentColor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd" />
+                        </svg>
+                        Discard
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<!-- drawer component -->
+<form action="#" id="drawer-update-product" class="fixed top-0 left-0 z-40 w-full h-screen max-w-3xl p-4 overflow-y-auto transition-transform -translate-x-full bg-white dark:bg-gray-800" tabindex="-1" aria-labelledby="drawer-update-product-label" aria-hidden="true">
+    <h5 id="drawer-label" class="inline-flex items-center mb-6 text-sm font-semibold text-gray-500 uppercase dark:text-gray-400">New Product</h5>
+    <button type="button" data-drawer-dismiss="drawer-update-product" aria-controls="drawer-update-product" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 absolute top-2.5 right-2.5 inline-flex items-center dark:hover:bg-gray-600 dark:hover:text-white">
+        <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd" />
+        </svg>
+        <span class="sr-only">Close menu</span>
+    </button>
+    <div class="grid gap-4 sm:grid-cols-3 sm:gap-6 ">
+        <div class="space-y-4 sm:col-span-2 sm:space-y-6">
+            <div>
+                <label for="name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Product Name</label>
+                <input type="text" name="name" id="name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-teal-600 focus:border-teal-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-teal-500 dark:focus:border-teal-500" value="Apple iMac 27&ldquo;" placeholder="Type product name" required="">
+            </div>
+            <div>
+                <label for="description" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Description</label>
+                <div class="w-full border border-gray-200 rounded-lg bg-gray-50 dark:bg-gray-700 dark:border-gray-600">
+                    <div class="flex items-center justify-between px-3 py-2 border-b dark:border-gray-600">
+                        <div class="flex flex-wrap items-center divide-gray-200 sm:divide-x dark:divide-gray-600">
+                            <div class="flex items-center space-x-1 sm:pr-4">
+                                <button type="button" class="p-2 text-gray-500 rounded cursor-pointer hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-600">
+                                    <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" d="M8 4a3 3 0 00-3 3v4a5 5 0 0010 0V7a1 1 0 112 0v4a7 7 0 11-14 0V7a5 5 0 0110 0v4a3 3 0 11-6 0V7a1 1 0 012 0v4a1 1 0 102 0V7a3 3 0 00-3-3z" clip-rule="evenodd" />
+                                    </svg>
+                                    <span class="sr-only">Attach file</span>
+                                </button>
+                                <button type="button" class="p-2 text-gray-500 rounded cursor-pointer hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-600">
+                                    <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd" />
+                                    </svg>
+                                    <span class="sr-only">Embed map</span>
+                                </button>
+                                <button type="button" class="p-2 text-gray-500 rounded cursor-pointer hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-600">
+                                    <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z" clip-rule="evenodd" />
+                                    </svg>
+                                    <span class="sr-only">Upload image</span>
+                                </button>
+                                <button type="button" class="p-2 text-gray-500 rounded cursor-pointer hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-600">
+                                    <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" d="M12.316 3.051a1 1 0 01.633 1.265l-4 12a1 1 0 11-1.898-.632l4-12a1 1 0 011.265-.633zM5.707 6.293a1 1 0 010 1.414L3.414 10l2.293 2.293a1 1 0 11-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0zm8.586 0a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 11-1.414-1.414L16.586 10l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                                    </svg>
+                                    <span class="sr-only">Format code</span>
+                                </button>
+                                <button type="button" class="p-2 text-gray-500 rounded cursor-pointer hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-600">
+                                    <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM7 9a1 1 0 100-2 1 1 0 000 2zm7-1a1 1 0 11-2 0 1 1 0 012 0zm-.464 5.535a1 1 0 10-1.415-1.414 3 3 0 01-4.242 0 1 1 0 00-1.415 1.414 5 5 0 007.072 0z" clip-rule="evenodd" />
+                                    </svg>
+                                    <span class="sr-only">Add emoji</span>
+                                </button>
+                            </div>
+                            <div class="flex-wrap items-center hidden space-x-1 sm:flex sm:pl-4">
+                                <button type="button" class="p-2 text-gray-500 rounded cursor-pointer hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-600">
+                                    <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" d="M3 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd" />
+                                    </svg>
+                                    <span class="sr-only">Add list</span>
+                                </button>
+                                <button type="button" class="p-2 text-gray-500 rounded cursor-pointer hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-600">
+                                    <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" d="M11.49 3.17c-.38-1.56-2.6-1.56-2.98 0a1.532 1.532 0 01-2.286.948c-1.372-.836-2.942.734-2.106 2.106.54.886.061 2.042-.947 2.287-1.561.379-1.561 2.6 0 2.978a1.532 1.532 0 01.947 2.287c-.836 1.372.734 2.942 2.106 2.106a1.532 1.532 0 012.287.947c.379 1.561 2.6 1.561 2.978 0a1.533 1.533 0 012.287-.947c1.372.836 2.942-.734 2.106-2.106a1.533 1.533 0 01.947-2.287c1.561-.379 1.561-2.6 0-2.978a1.532 1.532 0 01-.947-2.287c.836-1.372-.734-2.942-2.106-2.106a1.532 1.532 0 01-2.287-.947zM10 13a3 3 0 100-6 3 3 0 000 6z" clip-rule="evenodd" />
+                                    </svg>
+                                    <span class="sr-only">Settings</span>
+                                </button>
+                            </div>
+                        </div>
+                        <button type="button" data-tooltip-target="tooltip-fullscreen" class="p-2 text-gray-500 rounded cursor-pointer sm:ml-auto hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-600">
+                            <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M3 4a1 1 0 011-1h4a1 1 0 010 2H6.414l2.293 2.293a1 1 0 11-1.414 1.414L5 6.414V8a1 1 0 01-2 0V4zm9 1a1 1 0 010-2h4a1 1 0 011 1v4a1 1 0 01-2 0V6.414l-2.293 2.293a1 1 0 11-1.414-1.414L13.586 5H12zm-9 7a1 1 0 012 0v1.586l2.293-2.293a1 1 0 111.414 1.414L6.414 15H8a1 1 0 010 2H4a1 1 0 01-1-1v-4zm13-1a1 1 0 011 1v4a1 1 0 01-1 1h-4a1 1 0 010-2h1.586l-2.293-2.293a1 1 0 111.414-1.414L15 13.586V12a1 1 0 011-1z" clip-rule="evenodd" />
+                            </svg>
+                            <span class="sr-only">Full screen</span>
+                        </button>
+                        <div id="tooltip-fullscreen" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700" data-popper-reference-hidden="" data-popper-escaped="" data-popper-placement="bottom" style="position: absolute; inset: 0px auto auto 0px; margin: 0px; transform: translate3d(0px, 335px, 0px);">
+                            Show full screen
+                            <div class="tooltip-arrow" data-popper-arrow=""></div>
+                        </div>
+                    </div>
+                    <div class="px-4 py-3 bg-white rounded-b-lg dark:bg-gray-800"><textarea id="description" rows="8" class="block w-full px-0 text-sm text-gray-800 bg-white border-0 dark:bg-gray-800 focus:ring-0 dark:text-white dark:placeholder-gray-400" placeholder="Write product description here" required="">Standard glass, 3.8GHz 8-core 10th-generation Intel Core i7 processor, Turbo Boost up to 5.0GHz, 16GB 2666MHz DDR4 memory, Radeon Pro 5500 XT with 8GB of GDDR6 memory, 256GB SSD storage, Gigabit Ethernet, Magic Mouse 2, Magic Keyboard - US</textarea></div>
+                </div>
+            </div>
+            <div class="mb-4">
+                <span class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Product Images</span>
+                <div class="grid grid-cols-3 gap-4 mb-4">
+                    <div class="relative p-2 bg-gray-100 rounded-lg sm:w-36 sm:h-36 dark:bg-gray-700">
+                        <img src="https://flowbite.s3.amazonaws.com/blocks/application-ui/products/imac-side-image.png" alt="imac image">
+                        <button type="button" class="absolute text-red-600 dark:text-red-500 hover:text-red-500 dark:hover:text-red-400 bottom-1 left-1">
+                            <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v6a1 1 0 102 0V8a1 1 0 00-1-1z" clip-rule="evenodd" />
+                            </svg>
+                            <span class="sr-only">Remove image</span>
+                        </button>
+                    </div>
+                    <div class="relative p-2 bg-gray-100 rounded-lg sm:w-36 sm:h-36 dark:bg-gray-700">
+                        <img src="https://flowbite.s3.amazonaws.com/blocks/application-ui/products/imac-front-image.png" alt="imac image">
+                        <button type="button" class="absolute text-red-600 dark:text-red-500 hover:text-red-500 dark:hover:text-red-400 bottom-1 left-1">
+                            <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v6a1 1 0 102 0V8a1 1 0 00-1-1z" clip-rule="evenodd" />
+                            </svg>
+                            <span class="sr-only">Remove image</span>
+                        </button>
+                    </div>
+                    <div class="relative p-2 bg-gray-100 rounded-lg sm:w-36 sm:h-36 dark:bg-gray-700">
+                        <img src="https://flowbite.s3.amazonaws.com/blocks/application-ui/products/imac-back-image.png" alt="imac image">
+                        <button type="button" class="absolute text-red-600 dark:text-red-500 hover:text-red-500 dark:hover:text-red-400 bottom-1 left-1">
+                            <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v6a1 1 0 102 0V8a1 1 0 00-1-1z" clip-rule="evenodd" />
+                            </svg>
+                            <span class="sr-only">Remove image</span>
+                        </button>
+                    </div>
+                    <div class="relative p-2 bg-gray-100 rounded-lg sm:w-36 sm:h-36 dark:bg-gray-700">
+                        <img src="https://flowbite.s3.amazonaws.com/blocks/application-ui/products/imac-side-image.png" alt="imac image">
+                        <button type="button" class="absolute text-red-600 dark:text-red-500 hover:text-red-500 dark:hover:text-red-400 bottom-1 left-1">
+                            <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v6a1 1 0 102 0V8a1 1 0 00-1-1z" clip-rule="evenodd" />
+                            </svg>
+                            <span class="sr-only">Remove image</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="flex items-center justify-center w-full">
+                    <label for="dropzone-file" class="flex flex-col items-center justify-center w-full h-64 border-2 border-gray-300 border-dashed rounded-lg cursor-pointer bg-gray-50 dark:hover:bg-bray-800 dark:bg-gray-700 hover:bg-gray-100 dark:border-gray-600 dark:hover:border-gray-500 dark:hover:bg-gray-600">
+                        <div class="flex flex-col items-center justify-center pt-5 pb-6">
+                            <svg aria-hidden="true" class="w-10 h-10 mb-3 text-gray-400" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" />
+                            </svg>
+                            <p class="mb-2 text-sm text-gray-500 dark:text-gray-400">
+                                <span class="font-semibold">Click to upload</span>
+                                or drag and drop
+                            </p>
+                            <p class="text-xs text-gray-500 dark:text-gray-400">SVG, PNG, JPG or GIF (MAX. 800x400px)</p>
+                        </div>
+                        <input id="dropzone-file" type="file" class="hidden">
+                    </label>
+                </div>
+            </div>
+            <div class="flex items-center mb-4">
+                <input id="product-options" type="checkbox" value="" class="w-4 h-4 bg-gray-100 border-gray-300 rounded text-teal-600 focus:ring-teal-500 dark:focus:ring-teal-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                <label for="product-options" class="ml-2 text-sm text-gray-500 dark:text-gray-300">Product has multiple options, like different colors or sizes</label>
+            </div>
+            <div class="relative">
+                <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+                    <svg aria-hidden="true" class="w-5 h-5 text-gray-500 dark:text-gray-400" fill="currentColor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd" />
+                    </svg>
+                </div>
+                <input datepicker="" id="datepicker" type="text" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-teal-500 focus:border-teal-500 block w-full pl-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-teal-500 dark:focus:border-teal-500 datepicker-input" value="15/08/2022" placeholder="Select date">
+            </div>
+        </div>
+        <div class="space-y-4 sm:space-y-6">
+            <div>
+                <label for="product-brand" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Brand</label>
+                <input type="text" id="product-brand" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-teal-500 focus:border-teal-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-teal-500 dark:focus:border-teal-500" value="Apple" placeholder="Product Brand" required="">
+            </div>
+            <div><label for="category" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Category</label><select id="category" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-teal-500 focus:border-teal-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-teal-500 dark:focus:border-teal-500">
+                    <option selected="">Electronics</option>
+                    <option value="TV">TV/Monitors</option>
+                    <option value="PC">PC</option>
+                    <option value="GA">Gaming/Console</option>
+                    <option value="PH">Phones</option>
+                </select></div>
+            <div>
+                <label for="item-weight" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Item Weight (kg)</label>
+                <input type="number" name="item-weight" id="item-weight" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-teal-600 focus:border-teal-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-teal-500 dark:focus:border-teal-500" value="12" placeholder="Ex. 12" required="">
+            </div>
+            <div>
+                <label for="length" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Length (cm)</label>
+                <input type="number" name="length" id="lenght" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-teal-600 focus:border-teal-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-teal-500 dark:focus:border-teal-500" value="105" placeholder="Ex. 105" required="">
+            </div>
+            <div>
+                <label for="breadth" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Breadth (cm)</label>
+                <input type="number" name="breadth" id="breadth" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-teal-600 focus:border-teal-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-teal-500 dark:focus:border-teal-500" value="15" placeholder="Ex. 15" required="">
+            </div>
+            <div>
+                <label for="width" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Width (cm)</label>
+                <input type="number" name="width" id="width" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-teal-600 focus:border-teal-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-teal-500 dark:focus:border-teal-500" value="23" placeholder="Ex. 23" required="">
+            </div>
+        </div>
+    </div>
+    <div class="grid grid-cols-2 gap-4 mt-6 sm:w-1/2">
+        <button type="submit" class="text-white bg-teal-700 hover:bg-teal-800 focus:ring-4 focus:outline-none focus:ring-teal-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-teal-600 dark:hover:bg-teal-700 dark:focus:ring-teal-800">Update product</button>
+        <button type="button" class="text-red-600 inline-flex justify-center items-center hover:text-white border border-red-600 hover:bg-red-600 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:border-red-500 dark:text-red-500 dark:hover:text-white dark:hover:bg-red-600 dark:focus:ring-red-900">
+            <svg aria-hidden="true" class="w-5 h-5 mr-1 -ml-1" fill="currentColor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v6a1 1 0 102 0V8a1 1 0 00-1-1z" clip-rule="evenodd" />
+            </svg>
+            Delete
+        </button>
+    </div>
+</form>
+<!-- Preview Drawer -->
+<div id="drawer-read-product-advanced" class="overflow-y-auto fixed top-0 left-0 z-40 p-4 w-full max-w-lg h-screen bg-white transition-transform -translate-x-full dark:bg-gray-800" tabindex="-1" aria-labelledby="drawer-label" aria-hidden="true">
+    <div>
+        <h4 id="read-drawer-label" class="mb-1.5 leading-none text-xl font-semibold text-gray-900 dark:text-white">Apple iMac 25"</h4>
+        <h5 class="mb-5 text-xl font-bold text-gray-900 dark:text-white">$2999</h5>
+    </div>
+    <button type="button" data-drawer-dismiss="drawer-read-product-advanced" aria-controls="drawer-read-product-advanced" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 absolute top-2.5 right-2.5 inline-flex items-center dark:hover:bg-gray-600 dark:hover:text-white">
+        <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd" />
+        </svg>
+        <span class="sr-only">Close menu</span>
+    </button>
+    <div class="grid grid-cols-3 gap-4 mb-4 sm:mb-5">
+        <div class="p-2 w-auto bg-gray-100 rounded-lg dark:bg-gray-700">
+            <img src="https://flowbite.s3.amazonaws.com/blocks/application-ui/products/imac-side-image.png" alt="iMac Side Image">
+        </div>
+        <div class="p-2 w-auto bg-gray-100 rounded-lg dark:bg-gray-700">
+            <img src="https://flowbite.s3.amazonaws.com/blocks/application-ui/products/imac-front-image.png" alt="iMac Front Image">
+        </div>
+        <div class="p-2 w-auto bg-gray-100 rounded-lg dark:bg-gray-700">
+            <img src="https://flowbite.s3.amazonaws.com/blocks/application-ui/products/imac-back-image.png" alt="iMac Back Image">
+        </div>
+        <div class="p-2 w-auto bg-gray-100 rounded-lg dark:bg-gray-700">
+            <img src="https://flowbite.s3.amazonaws.com/blocks/application-ui/products/imac-side-image.png" alt="iMac Back Image">
+        </div>
+        <div class="p-2 w-auto bg-gray-100 rounded-lg dark:bg-gray-700">
+            <img src="https://flowbite.s3.amazonaws.com/blocks/application-ui/products/imac-back-image.png" alt="iMac Front Image">
+        </div>
+        <div class="p-2 w-auto bg-gray-100 rounded-lg dark:bg-gray-700">
+            <img src="https://flowbite.s3.amazonaws.com/blocks/application-ui/products/imac-side-image.png" alt="iMac Side Image">
+        </div>
+    </div>
+    <dl class="sm:mb-5">
+        <dt class="mb-2 font-semibold leading-none text-gray-900 dark:text-white">Details</dt>
+        <dd class="mb-4 font-light text-gray-500 sm:mb-5 dark:text-gray-400">Standard glass ,3.8GHz 8-core 10th-generation Intel Core i7 processor, Turbo Boost up to 5.0GHz, 16GB 2666MHz DDR4 memory, Radeon Pro 5500 XT with 8GB of GDDR6 memory, 256GB SSD storage, Gigabit Ethernet, Magic Mouse 2, Magic Keyboard - US.</dd>
+    </dl>
+    <dl class="grid grid-cols-2 gap-4 mb-4">
+        <div class="col-span-2 p-3 bg-gray-100 rounded-lg border border-gray-200 dark:bg-gray-700 sm:col-span-1 dark:border-gray-600">
+            <dt class="mb-2 font-semibold leading-none text-gray-900 dark:text-white">Shipping</dt>
+            <dd class="flex items-center text-gray-500 dark:text-gray-400">
+                <svg class="w-4 h-4 mr-1.5" aria-hidden="true" fill="currentColor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd" />
+                </svg>
+                United States, Europe
+            </dd>
+        </div>
+        <div class="col-span-2 p-3 bg-gray-100 rounded-lg border border-gray-200 dark:bg-gray-700 sm:col-span-1 dark:border-gray-600">
+            <dt class="mb-2 font-semibold leading-none text-gray-900 dark:text-white">Colors</dt>
+            <dd class="flex items-center space-x-2 font-light text-gray-500 dark:text-gray-400">
+                <div class="flex-shrink-0 w-6 h-6 bg-purple-600 rounded-full"></div>
+                <div class="flex-shrink-0 w-6 h-6 bg-indigo-400 rounded-full"></div>
+                <div class="flex-shrink-0 w-6 h-6 rounded-full bg-teal-600"></div>
+                <div class="flex-shrink-0 w-6 h-6 bg-pink-400 rounded-full"></div>
+                <div class="flex-shrink-0 w-6 h-6 bg-teal-300 rounded-full"></div>
+                <div class="flex-shrink-0 w-6 h-6 bg-green-300 rounded-full"></div>
+            </dd>
+        </div>
+        <div class="p-3 bg-gray-100 rounded-lg border border-gray-200 dark:bg-gray-700 dark:border-gray-600">
+            <dt class="mb-2 font-semibold leading-none text-gray-900 dark:text-white">Product State</dt>
+            <dd class="text-gray-500 dark:text-gray-400">
+                <span class="bg-teal-100 text-teal-800 text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded dark:bg-teal-200 dark:text-teal-800">
+                    <svg aria-hidden="true" class="mr-1 w-3 h-3" fill="currentColor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                    </svg>
+                    New
+                </span>
+            </dd>
+        </div>
+        <div class="p-3 bg-gray-100 rounded-lg border border-gray-200 dark:bg-gray-700 dark:border-gray-600">
+            <dt class="mb-2 font-semibold leading-none text-gray-900 dark:text-white">Sold by</dt>
+            <dd class="text-gray-500 dark:text-gray-400">Flowbite</dd>
+        </div>
+        <div class="p-3 bg-gray-100 rounded-lg border border-gray-200 dark:bg-gray-700 dark:border-gray-600">
+            <dt class="mb-2 font-semibold leading-none text-gray-900 dark:text-white">Ships from</dt>
+            <dd class="text-gray-500 dark:text-gray-400">Flowbite</dd>
+        </div>
+        <div class="p-3 bg-gray-100 rounded-lg border border-gray-200 dark:bg-gray-700 dark:border-gray-600">
+            <dt class="mb-2 font-semibold leading-none text-gray-900 dark:text-white">Brand</dt>
+            <dd class="text-gray-500 dark:text-gray-400">Apple</dd>
+        </div>
+        <div class="p-3 bg-gray-100 rounded-lg border border-gray-200 dark:bg-gray-700 dark:border-gray-600">
+            <dt class="mb-2 font-semibold leading-none text-gray-900 dark:text-white">Dimensions (cm)</dt>
+            <dd class="text-gray-500 dark:text-gray-400">105 x 15 x 23</dd>
+        </div>
+        <div class="p-3 bg-gray-100 rounded-lg border border-gray-200 dark:bg-gray-700 dark:border-gray-600">
+            <dt class="mb-2 font-semibold leading-none text-gray-900 dark:text-white">Item weight</dt>
+            <dd class="text-gray-500 dark:text-gray-400">12kg</dd>
+        </div>
+    </dl>
+    <div class="flex bottom-0 left-0 justify-center pb-4 space-x-4 w-full">
+        <button type="button" class="text-white w-full inline-flex items-center justify-center bg-teal-700 hover:bg-teal-800 focus:ring-4 focus:outline-none focus:ring-teal-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-teal-600 dark:hover:bg-teal-700 dark:focus:ring-teal-800">
+            <svg aria-hidden="true" class="mr-1 -ml-1 w-5 h-5" fill="currentColor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                <path d="M17.414 2.586a2 2 0 00-2.828 0L7 10.172V13h2.828l7.586-7.586a2 2 0 000-2.828z" />
+                <path fill-rule="evenodd" d="M2 6a2 2 0 012-2h4a1 1 0 010 2H4v10h10v-4a1 1 0 112 0v4a2 2 0 01-2 2H4a2 2 0 01-2-2V6z" clip-rule="evenodd" />
+            </svg>
+            Edit
+        </button>
+        <button type="button" class="inline-flex w-full items-center text-white justify-center bg-red-600 hover:bg-red-700 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-red-500 dark:hover:bg-red-600 dark:focus:ring-red-900">
+            <svg aria-hidden="true" class="w-5 h-5 mr-1.5 -ml-1" fill="currentColor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v6a1 1 0 102 0V8a1 1 0 00-1-1z" />
+            </svg>
+            Delete
+        </button>
+    </div>
+</div>
+<!-- Delete Modal -->
+<div id="delete-modal" tabindex="-1" class="fixed top-0 left-0 right-0 z-50 hidden p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full">
+    <div class="relative w-full h-auto max-w-md max-h-full">
+        <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+            <button type="button" class="absolute top-3 right-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-800 dark:hover:text-white" data-modal-toggle="delete-modal">
+                <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd" />
+                </svg>
+                <span class="sr-only">Close modal</span>
+            </button>
+            <div class="p-6 text-center">
+                <svg aria-hidden="true" class="mx-auto mb-4 text-gray-400 w-14 h-14 dark:text-gray-200" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <h3 class="mb-5 text-lg font-normal text-gray-500 dark:text-gray-400">Are you sure you want to delete this product?</h3>
+                <button data-modal-toggle="delete-modal" type="button" class="text-white bg-red-600 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 font-medium rounded-lg text-sm inline-flex items-center px-5 py-2.5 text-center mr-2">Yes, I'm sure</button>
+                <button data-modal-toggle="delete-modal" type="button" class="text-gray-500 bg-white hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-200 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10 dark:bg-gray-700 dark:text-gray-300 dark:border-gray-500 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-600">No, cancel</button>
+            </div>
+        </div>
+    </div>
+</div>
