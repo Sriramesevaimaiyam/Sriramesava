@@ -18,6 +18,16 @@ class customerModel extends CI_Model
         }
     }
 
+    public function customerData(){
+        $queryString = "SELECT * FROM customer_master";
+        $qryExe = $this->db->query($queryString);
+        if (!$qryExe) {
+            $error = $this->db->error();
+            return false;
+        }
+		return $qryExe->result_array();
+    }
+
     public function getCustomerList($data){
         $queryString = "SELECT * FROM customer_master WHERE `mobile`= $data OR `name`= $data";
         $qryExe = $this->db->query($queryString);

@@ -59,5 +59,5 @@ $route['srirameseva/customers'] = 'customer';
 $route['srirameseva/services'] = 'welcome/services';
 $route['srirameseva/billing'] = 'welcome/billing';
 
-$route['srirameseva/customers/createCustomer'] = 'customer/createCustomer';
+$route['srirameseva/customers/:any'] = 'customer/createCustomer';
 $route['srirameseva/customers/searchResult'] = 'customer/searchResult';

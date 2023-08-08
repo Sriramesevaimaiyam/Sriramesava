@@ -31,6 +31,7 @@ class customer extends CI_Controller {
 
 	public function index()
 	{
+		$customerData = $this->customerModel->customerData();
 		$this->load->view('customer.php');
 	}
 
@@ -43,9 +44,9 @@ class customer extends CI_Controller {
 
 	public function createCustomer(){
 		$postData = $this->input->post(null, true);
-
-        $customerList = $this->customerModel->getCustomerList($postData['search']);
-		$this->load->view('customer_search.php');
+		// $customerData = $this->customerModel->customerData();
+        $customerList = $this->customerModel->createCustomer();
+		$this->index();
 	}
 
 	public function notification(){
