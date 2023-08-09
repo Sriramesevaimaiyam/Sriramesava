@@ -32,14 +32,16 @@ class customer extends CI_Controller {
 	public function index()
 	{
 		$customerData = $this->customerModel->customerData();
-		$this->load->view('customer.php');
+		$this->data['customerData'] = $customerData;
+		$this->load->view('customer.php', $this->data);
 	}
 
 	public function searchresult(){
 		$postData = $this->input->post(null, true);
 
         $customerList = $this->customerModel->getCustomerList($postData['search']);
-		$this->load->view('customer_search.php');
+		$this->data['customerList'] = $customerList;
+		$this->load->view('customer_search.php', $this->data);
 	}
 
 	public function createCustomer(){

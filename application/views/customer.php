@@ -387,20 +387,24 @@
                         </tr>
                     </thead>
                     <tbody>
+                        <?php
+                        $customerList = $this->data['customerData'];
+                        foreach($customerList as $key => $value){
+                        ?>
                         <tr class="border-b dark:border-gray-600 hover:bg-gray-100 dark:hover:bg-gray-700">
                             <th scope="row" class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap dark:text-white">
                                 <div class="flex items-center mr-3">
                                     <img src="https://www.transparentpng.com/thumb/user/gray-user-profile-icon-png-fP8Q1P.png" alt="iMac Front Image" class="h-8 w-auto mr-3">
-                                    Prasanth S
+                                    <?php echo $value['name'];  ?>
                                 </div>
                             </th>
                             <td class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap dark:text-white">
                                 <div class="flex items-center">
                                     <div class="h-4 w-4 rounded-full inline-block mr-2 bg-red-700"></div>
-                                    9880397506
+                                    <?php echo $value['mobile'];  ?>
                                 </div>
                             </td>
-                            <td class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap dark:text-white">sivagiri</td>
+                            <td class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap dark:text-white"><?php echo $value['address'];  ?></td>
                             <!-- <td class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap dark:text-white">
                                 <div class="flex items-center">
                                     <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" fill="currentColor" class="w-5 h-5 text-gray-400 mr-2" aria-hidden="true">
@@ -434,6 +438,9 @@
                                 </div>
                             </td>
                         </tr>
+                        <?php
+                        }
+                        ?>
                     </tbody>
                 </table>
             </div>
