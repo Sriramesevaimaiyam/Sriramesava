@@ -51,16 +51,25 @@ class customer extends CI_Controller {
 		$this->index();
 	}
 
-	public function notification(){
-		$this->load->view('notification.php');
+	public function editCustomer(){
+		$customerId = $this->uri->segment(4);
+		$customer = $this->customerModel->getCustomerById($customerId);
+		$this->data['customer'] = $customer;
+		$this->load->view('updateCustomer.php' , $this->data);
 	}
 
-	public function serviceforms(){
-		$this->load->view('serviceform.php');
+	public function update(){
+		$postData = $this->input->post(null, true);
+		$customerId = $postData['id'];
+		$customer = $this->customerModel->updateCustomer($customerId);
+		$this->index();
 	}
 
-	public function customers(){
-		$this->load->view('customer.php');
+	public function delete(){
+		$customerId = $this->uri->segment(4);
+		$postData = $this->input->post(null, true);
+		$customer = $this->customerModel->deleteCustomer($customerId);
+		$this->index();
 	}
 
 	public function billing(){

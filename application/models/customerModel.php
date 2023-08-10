@@ -38,4 +38,36 @@ class customerModel extends CI_Model
 		return $qryExe->result_array();
     }
 
+    public function getCustomerById($customerId){
+        $queryString = "SELECT * FROM customer_master WHERE `id`= $customerId";
+        $qryExe = $this->db->query($queryString);
+        if (!$qryExe) {
+            $error = $this->db->error();
+            return false;
+        }
+		return $qryExe->result_array();
+    }
+
+    public function updateCustomer($customerId){
+        $postData = $this->input->post(null, true);
+        $dataUpdate = array('name' => $postData["name"], 'mobile' => $postData["mobile"], 'address' => $postData["address"]);
+        $this->db->where('id', $customerId);
+		$updateExe = $this->db->update('customer_master', $dataUpdate);
+		if (!$updateExe) {
+			$error = $this->db->error();
+			return false;
+		}
+    }
+
+    public function deleteCustomer($customerId){
+        
+        $postData = $this->input->post(null, true);
+        $deleteExe = $this->db->query("delete from customer_master where id=" . $customerId);
+        //$deleteExe = $this->db->delete('customer_master', $customerId);
+		if (!$deleteExe) {
+			$error = $this->db->error();
+			return false;
+		}
+    }
+
 }
