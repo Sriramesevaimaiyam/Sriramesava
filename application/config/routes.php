@@ -64,3 +64,8 @@ $route['srirameseva/customers/searchResult'] = 'customer/searchResult';
 $route['srirameseva/customers/editCustomer/:num'] = 'customer/editCustomer';
 $route['srirameseva/customers/update'] = 'customer/update';
 $route['srirameseva/customers/delete/:num'] = 'customer/delete';
+
+// Billing
+$route['srirameseva/billing'] = 'billing';
+$route['srirameseva/customers/addNewService/:num'] = 'billing/addNewService';
+$route['srirameseva/billing/createService'] = 'billing/createService';
