@@ -50,11 +50,14 @@
         <form class="form-horizontal bucket-form" action="http://localhost/srirameseva/customers/update" id="updateCustomer" method="post" enctype="multipart/form-data">
             <h1 class="sm:text-3xl text-2xl text-center  font-medium title-font mb-16 text-teal-700">Update Customer Details</h1>
             <?php
+            $user = $this->session->userName;
+            $userId = $this->session->userId;
             $customer = $this->data['customer'];
             foreach($customer as $key => $value) {
             ?>
                 <div class="grid gap-6 mb-10 md:grid-cols-2 ">
                 <input type="text" id="name" name="id" class="bg-gray-50 border border-gray-300 text-gray-900 text-base rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 hidden" placeholder="Name" value="<?php echo $value['id']; ?>" required="">
+                <input type="text" id="UserId" name="userId" class="bg-gray-50 border border-gray-300 text-gray-900 text-base rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 hidden" placeholder="Name" value="<?php echo $userId; ?>" required="">
                     <div>
                         <label for="name" class="block mb-2 text-base font-medium text-gray-900 dark:text-gray-300">Name</label>
                         <input type="text" id="name" name="name" class="bg-gray-50 border border-gray-300 text-gray-900 text-base rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Name" value="<?php echo $value['name']; ?>" required="">
@@ -69,13 +72,7 @@
                     </div>
                     <div>
                         <label for="user" class="block mb-2 text-base font-medium text-gray-900 dark:text-white">User</label>
-                        <select id="user" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-teal-500 focus:border-teal-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-teal-500 dark:focus:border-teal-500">
-                            <option selected="">Select User</option>
-                            <option value="TV">TV/Monitors</option>
-                            <option value="PC">PC</option>
-                            <option value="GA">Gaming/Console</option>
-                            <option value="PH">Phones</option>
-                        </select>
+                        <input type="text" id="user" name="user" class="bg-gray-50 border border-gray-300 text-gray-900 text-base rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" value="<?php echo $user; ?>" placeholder="user">
                     </div>
                 </div>
             <?php

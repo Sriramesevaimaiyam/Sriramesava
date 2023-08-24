@@ -35,11 +35,4 @@ class Welcome extends CI_Controller {
 		$this->load->view('serviceform.php');
 	}
 
-	public function customers(){
-		$this->load->view('customer.php');
-	}
-
-	public function billing(){
-		$this->load->view('billing.php');
-	}
 }

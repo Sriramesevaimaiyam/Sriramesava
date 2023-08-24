@@ -18,7 +18,7 @@ class billingModel extends CI_Model
     
     public function AddNewService(){
         $postData = $this->input->post(null,true);
-        $insertData = array('customerName' => $postData["name"], 'mobile' => $postData["mobile"], 'billingUser'=> $postData['user'], 'service' => $postData["service"], 'type' => $postData['type'], 'paymentMode' => $postData['paymentMode'], 'status' => $postData['status'], 'payment' => $postData['payment']);
+        $insertData = array('customerName' => $postData["name"], 'mobile' => $postData["mobile"], 'billingUser'=> $postData['user'], 'service' => $postData["service"], 'type' => $postData['type'], 'paymentMode' => $postData['paymentMode'], 'status' => $postData['status'], 'payment' => $postData['payment'], 'userId' => $postData['userId'], 'customerId' => $postData['id']);
         $insertExe = $this->db->insert("billing_master", $insertData);
 
         if (!$insertExe) {

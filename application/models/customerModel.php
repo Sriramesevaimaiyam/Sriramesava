@@ -50,7 +50,7 @@ class customerModel extends CI_Model
 
     public function updateCustomer($customerId){
         $postData = $this->input->post(null, true);
-        $dataUpdate = array('name' => $postData["name"], 'mobile' => $postData["mobile"], 'address' => $postData["address"]);
+        $dataUpdate = array('name' => $postData["name"], 'mobile' => $postData["mobile"], 'address' => $postData["address"], 'userId' => $postData['userId']);
         $this->db->where('id', $customerId);
 		$updateExe = $this->db->update('customer_master', $dataUpdate);
 		if (!$updateExe) {
@@ -60,7 +60,7 @@ class customerModel extends CI_Model
     }
 
     public function deleteCustomer($customerId){
-        
+
         $postData = $this->input->post(null, true);
         $deleteExe = $this->db->query("delete from customer_master where id=" . $customerId);
         //$deleteExe = $this->db->delete('customer_master', $customerId);

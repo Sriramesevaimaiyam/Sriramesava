@@ -23,6 +23,8 @@ class customer extends CI_Controller {
     {
         parent::__construct();
         $this->load->model('customerModel');
+        $this->load->model('userModel');
+		$this->load->library('session');
         // if ($this->Utilities->checkUserLogged()) {
         //     $userLoggedIn = $this->session->get_userdata('vendorLoggedIn');
         //     $this->data['vendorLoggedIn'] = $userLoggedIn['vendorLoggedIn'];
@@ -30,7 +32,33 @@ class customer extends CI_Controller {
     }
 
 	public function index()
-	{
+    {
+        $this->load->view('login.php');
+    }
+
+    public function authentication()
+    {
+        $postData = $this->input->post(null, true);
+        $authentication = $this->userModel->loginAuthentication();
+        if (isset($authentication[0]['id'])) {
+            // $_session['userId'] = $authentication[0]['id'];
+            // $_session['userName'] = $authentication[0]['userName'];
+            // $_session['mobile']= $authentication[0]['mobileNumber'];
+            $userLoggedIn = array(
+                'userId' => $authentication[0]['id'],
+                'userName' => $authentication[0]['userName'],
+                'mobile' => $authentication[0]['mobileNumber']
+            );
+			$this->session->set_userdata($userLoggedIn);
+            $this->customer();
+        }
+        else{
+            $this->load->view('login.php');
+        }
+    }
+
+	public function customer(){
+		
 		$customerData = $this->customerModel->customerData();
 		$this->data['customerData'] = $customerData;
 		$this->load->view('customer.php', $this->data);
@@ -48,7 +76,7 @@ class customer extends CI_Controller {
 		$postData = $this->input->post(null, true);
 		// $customerData = $this->customerModel->customerData();
         $customerList = $this->customerModel->createCustomer();
-		$this->index();
+		$this->customer();
 	}
 
 	public function editCustomer(){
@@ -62,14 +90,14 @@ class customer extends CI_Controller {
 		$postData = $this->input->post(null, true);
 		$customerId = $postData['id'];
 		$customer = $this->customerModel->updateCustomer($customerId);
-		$this->index();
+		$this->customer();
 	}
 
 	public function delete(){
 		$customerId = $this->uri->segment(4);
 		$postData = $this->input->post(null, true);
 		$customer = $this->customerModel->deleteCustomer($customerId);
-		$this->index();
+		$this->customer();
 	}
 
 	public function billing(){

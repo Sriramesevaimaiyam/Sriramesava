@@ -46,6 +46,9 @@
     </nav>
 </header>
 <!-- Start block -->
+<!-- <?php 
+    $username = $_SESSION['userLoggedIn']['userName'];
+    ?> -->
 <section class="bg-gray-50 dark:bg-gray-900 p-3 sm:p-5 antialiased">
     <div class="mx-auto max-w-screen-2xl px-4 lg:px-12">
         <div class="bg-white dark:bg-gray-800 relative shadow-md sm:rounded-lg overflow-hidden">
@@ -530,11 +533,7 @@
                     <div>
                         <label for="user" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">User</label>
                         <select id="user" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-teal-500 focus:border-teal-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-teal-500 dark:focus:border-teal-500">
-                            <option selected="">Select User</option>
-                            <option value="TV">TV/Monitors</option>
-                            <option value="PC">PC</option>
-                            <option value="GA">Gaming/Console</option>
-                            <option value="PH">Phones</option>
+                            <option selected=""><?php echo $username; ?></option>
                         </select>
                     </div>
                 </div>

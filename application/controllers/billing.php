@@ -24,6 +24,7 @@ class billing extends CI_Controller {
         parent::__construct();
         $this->load->model('billingModel');
         $this->load->model('customerModel');
+		$this->load->library('session');
         // if ($this->Utilities->checkUserLogged()) {
         //     $userLoggedIn = $this->session->get_userdata('vendorLoggedIn');
         //     $this->data['vendorLoggedIn'] = $userLoggedIn['vendorLoggedIn'];
