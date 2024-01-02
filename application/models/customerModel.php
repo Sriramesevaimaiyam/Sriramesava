@@ -9,7 +9,7 @@ class customerModel extends CI_Model
     public function createCustomer(){
         $postData = $this->input->post(null, true);
 
-        $insertData = array('name' => $postData["name"], 'mobile' => $postData["mobile"], 'address' => $postData["address"]);
+        $insertData = array('name' => $postData["name"], 'mobile' => $postData["mobile"], 'address' => $postData["address"], 'billingUser' => $postData['user'], 'userId' => $postData['userId']);
         $insertExe = $this->db->insert("customer_master", $insertData);
 
         if (!$insertExe) {
